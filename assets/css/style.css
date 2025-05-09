@@ -1513,3 +1513,227 @@ img {
   }
 }
 /* End Pagination */
+
+/* Section 5 - Cart Detail */
+.cart-detail {
+  padding: 40px 0;
+}
+
+.cart-detail .checkout-process-bar {
+  border: 1px solid #ddd;
+  padding: 30px 40px;
+  border-radius: 20px 0 20px 0;
+  position: relative;
+}
+
+.cart-detail .checkout-process-bar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.cart-detail .checkout-process-bar ul span {
+  font-size: 12px;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.cart-detail .checkout-process-bar .inner-line {
+  background-color: #e7e8e9;
+  height: 4px;
+  width: 84%;
+  position: absolute;
+  top: 21.5px;
+  left: 60px;
+}
+
+.cart-detail .checkout-process-bar li {
+  position: relative;
+}
+
+.cart-detail .checkout-process-bar li .inner-dot {
+  width: 14px;
+  height: 14px;
+  background-color:#fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cart-detail .checkout-process-bar li .inner-dot.active {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.cart-detail .inner-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 30px;
+}
+
+.cart-detail .inner-title span {
+  color: #d73831;
+  font-weight: 700;
+}
+
+.cart-detail .cart-table img {
+  width: 150px;
+  height: 215px;
+}
+
+.cart-detail .cart-table .width-table {
+  max-width: 250px;
+}
+
+.cart-detail .cart-table div {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c6d70;
+}
+
+.cart-detail .cart-table div.fontsize-14 {
+  font-size: 14px;
+  margin-top: 16px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cart-detail .cart-table .quantity {
+  display: flex;
+  position: relative;
+  width: 144px;
+}
+
+.section-5-down,
+.section-5-up {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 16px 0;
+  background: #fff;
+  color: var(--color-text);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  font-size: 24px;
+}
+
+.section-5-down {
+  left: 0;
+}
+
+.section-5-up {
+  right: 0;
+}
+
+.cart-detail .cart-table .quantity input {
+  width: 100%;
+  height: 48px;
+  outline: none;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  position: absolute;
+  left: 0;
+  padding: 0 47px;
+}
+
+.cart-detail input[type=number]::-webkit-inner-spin-button, 
+.cart-detail input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.cart-detail .cart-table .total-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3e3e3f;
+  line-height: 48px;
+}
+
+.cart-detail .cart-table i {
+  font-size: 20px;
+  line-height: 48px;
+  color: #d73831;
+  cursor: pointer;
+}
+
+.cart-summary {
+  background-color: rgba(247, 248, 249, 0.9);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.cart-detail .inner-position {
+  position: sticky;
+  top: 100px;
+  right: 0;
+}
+
+.cart-summary-title {
+  font-size: 20px;
+  color: var(--color-text);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.cart-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: #57585a;
+}
+
+.cart-summary-item span {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.cart-summary-item p {
+  margin-bottom: 0;
+}
+
+.cart-summary-note {
+  display: flex;
+  gap: 10px;
+  color: #AC2F33;
+}
+
+.cart-summary-note p {
+  font-size: 14px;
+}
+
+
+.cart-detail .inner-button {
+  margin-top: 20px;
+}
+
+.cart-detail .button-outline {
+  background-color: var(--color-text);
+  border: 1px solid var(--color-text);
+  display: inline-flex;
+  height: 50px;
+  width: 100%;
+  border-radius: 16px 0;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.cart-detail .button-outline:hover {
+  background-color: transparent;
+  color: var(--color-text);
+}
+/* End Section 5 - Cart Detail */

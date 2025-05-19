@@ -240,6 +240,7 @@ img {
 
 #menu-mobile .offcanvas-body {
   padding-top: 0;
+  overflow-y: hidden;
 }
 
 #menu-mobile .menu-mobile-button a {
@@ -287,19 +288,28 @@ img {
 
 #menu-mobile .menu-mobile-content ul li a:hover span,
 #sub-menu-mobile1 a:hover,
-#sub-menu-mobile2 a:hover {
+#sub-menu-mobile2 a:hover,
+#sub-menu-mobile3 a:hover,
+#sub-menu-mobile4 a:hover,
+#sub-menu-mobile5 a:hover {
   color: #B42F33;
 }
 
 #sub-menu-mobile1,
-#sub-menu-mobile2 {
+#sub-menu-mobile2,
+#sub-menu-mobile3,
+#sub-menu-mobile4,
+#sub-menu-mobile5 {
   padding: 0 20px;
   list-style: none;
   margin: 0;
 }
 
 #sub-menu-mobile1 a,
-#sub-menu-mobile2 a {
+#sub-menu-mobile2 a,
+#sub-menu-mobile3 a,
+#sub-menu-mobile4 a,
+#sub-menu-mobile5 a  {
   font-size: 14px;
   font-weight: normal;
   color: #373737;

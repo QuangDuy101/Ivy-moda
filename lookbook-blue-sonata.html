@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Lookbook BLUE SONATA | IVY moda</title>
+</head>
+
+<body style="font-family: 'Montserrat', sans-serif;">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="inner-wrap">
+        <!-- Menu Moblie -->
+        <button class="inner-menu-mobile" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile"
+          aria-controls="menu-mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="menu-mobile">
+          <div class="offcanvas-header">
+            <button class="button-close-menu" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="menu-mobile-button">
+              <a href="#">Đăng nhập</a>
+            </div>
+            <nav class="menu-mobile-content">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" href="#sub-menu-mobile1" role="button" aria-expanded="false"
+                    aria-controls="sub-menu-mobile1">
+                    <span>Nữ</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <ul class="collapse" id="sub-menu-mobile1">
+                    <li>
+                      <a href="#">Chân váy</a>
+                    </li>
+                    <li>
+                      <a href="#">Đầm / Áo dài</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a data-bs-toggle="collapse" href="#sub-menu-mobile2" role="button" aria-expanded="false"
+                    aria-controls="sub-menu-mobile2">
+                    <span>Nam</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <ul class="collapse" id="sub-menu-mobile2">
+                    <li>
+                      <a href="#">Áo</a>
+                    </li>
+                    <li>
+                      <a href="#">Quần nam</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="active">
+                    <span>Siêu sale T5 chào hè</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Bộ sưu tập</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>LIFESTYLE</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Về chúng tôi</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- End Menu Mobile -->
+
+        <nav class="inner-menu">
+          <ul>
+            <li>
+              <a href="#">Nữ</a>
+            </li>
+            <li>
+              <a href="#">Nam</a>
+            </li>
+            <li>
+              <a href="#" class="active">Siêu sale t5 chào hè</a>
+              <ul>
+                <div class="sub-title-menu">
+                  <a href="#">SALE 50% Toàn bộ SP</a>
+                </div>
+                <li>
+                  <a href="#">Áo công sở</a>
+                </li>
+                <li>
+                  <a href="#">Đầm kiểu</a>
+                </li>
+                <li>
+                  <a href="#">Áo khoác / blazer</a>
+                </li>
+                <li>
+                  <a href="#">Áo thun / len</a>
+                </li>
+                <li>
+                  <a href="#">Quần tây / jeans</a>
+                </li>
+                <li>
+                  <a href="#">Chân váy công sở</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Bộ sưu tập</a>
+            </li>
+            <li>
+              <a href="#">Về chúng tôi</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="inner-logo">
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="IVY moda" />
+          </a>
+        </div>
+        <div class="inner-right-header">
+          <form action="">
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" placeholder="TÌM KIẾM SẢN PHẨM" />
+          </form>
+          <div class="inner-actions">
+            <!-- Collapse Headphone -->
+            <div class="inner-headphone">
+              <a data-bs-toggle="collapse" href="#collapseHeadphone" role="button" aria-expanded="false"
+                aria-controls="collapseHeadphone">
+                <i class="fa-solid fa-headphones"></i>
+              </a>
+              <div class="collapse" id="collapseHeadphone">
+                <div class="card card-body">
+                  <div class="inner-head">Trợ giúp</div>
+                  <nav class="inner-body">
+                    <ul>
+                      <li><a href="#"><i class="fa-solid fa-phone-volume"></i> Hotline</a></li>
+                      <li><a href="#"><i class="fa-regular fa-comment-dots"></i> Live chat</a></li>
+                      <li><a href="#"><i class="fa-solid fa-repeat"></i> Messenger</a></li>
+                      <li><a href="#"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                      <li><a href="#"><i class="fa-solid fa-paw"></i> Tra cứu đơn hàng</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- End Collapse Headphone -->
+            <div class="inner-user">
+              <a href="#"><i class="fa-regular fa-user"></i></a>
+            </div>
+            <div class="inner-cart">
+              <!-- Cart Mobile -->
+              <a data-bs-toggle="offcanvas" href="#cart-mobile" role="button" aria-controls="cart-mobile">
+                <i class="bi bi-bag"></i>
+                <span>0</span>
+              </a>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="cart-mobile" aria-labelledby="cart-mobile-title">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="cart-mobile-title">
+                    Giỏ hàng
+                    <div class="cart-mobile-quantity">0</div>
+                  </h5>
+                  <button data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="inner-content">
+                    <div class="cart-mobile-total">Tổng cộng:<b>0đ</b></div>
+                    <a href="#" class="cart-mobile-button">Đăng nhập</a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Cart Mobile -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+
+  <!-- Content -->
+  <div class="container">
+    <!-- Breadcrumb -->
+    <div class="d-flex align-items-center border-bottom border-secondary border-opacity-10  flex-row"
+      style="height: 57px; ">
+      <p class="m-0" style="opacity: 50%;">Trang chủ - </p>
+      <p class="mb-0 ms-1"> BLUE SONATA</p>
+    </div>
+    <!-- End Breadcrumb -->
+    <!-- Banner look-book -->
+    <div class="mt-5" style="margin-bottom: 80px;">
+
+      <img src="./assets/images/banner-1.webp" alt="" style="width: 100%; border-radius: 0 0 80px 0px;">
+    </div>
+    <!-- End Banner look-book -->
+    <!-- Infor Blue -->
+    <div class="text-center ">
+      <h4 class="fs-4">NEW COLLECTION 2025 </h4>
+      <h3
+        style="font-weight: bold;font-size: 80px;line-height: 98px;-webkit-text-stroke: 1px #221F20;color: #fff;margin-bottom: 32px;">
+        BLUE SONATA</h3>
+      <p style="font-weight: 600;font-size: 30px;line-height: 32px;color: #221F20;margin-bottom: 24px;">Lấy cảm hứng từ
+        những bản nhạc du dương và sắc xanh bất tận của bầu trời, BST Blue Sonata mở ra một không gian
+        đầy chất thơ và tinh tế. Hãy cùng IVY moda khám phá ngay bản giao hưởng màu xanh mát. Để mang đến cảm giác dịu
+        mát, mới mẻ cho mùa Xuân Hè 2025, BST lần này của IVY moda lựa chọn sắc xanh dương làm chủ đạo, đồng thời kết
+        hợp cùng các tông màu trung tính như nâu và trắng để tạo nên một bảng màu vừa thời thượng, vừa mang tính ứng
+        dụng cao cho quý cô công sở.</p>
+    </div>
+    <!-- End infor Blue -->
+    <!-- item img -->
+    <div class="row mt-5" style="margin-bottom: 45px;">
+      <div class="col-md-6 mb-4">
+        <img src="./assets/images/lookbook-blue.webp" alt="" style="width: 100%;">
+      </div>
+      <div class="col-md-6 mb-4">
+        <img src="./assets/images/lookbook-blue2.webp" alt="" style="width: 100%;">
+      </div>
+    </div>
+    <!-- End item img -->
+    <!-- Card Product -->
+    <div class="row product-list-lb-bl">
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/product-9.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            <li class="list-inline-item">
+              <div class="box-1 d-flex align-items-center"
+                style="width: 18px; height: 18px; background-color: antiquewhite; border-radius: 50%;"></div>
+
+            </li>
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-image: url(./assets/images/k04.png); border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            <li class="list-inline-item">
+              <div class="box-3 position-relative"
+                style="width: 18px; height: 18px; background-image: url(./assets/images/k17.png); border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Áo len Polo
+            kẻ ngang</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.090.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Sea Breeze Skirt - Chân váy xòe tafta.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            <li class="list-inline-item">
+              <div class="box-1 d-flex align-items-center"
+                style="width: 18px; height: 18px; background-color: #7FA1AB; border-radius: 50%;"></div>
+
+            </li>
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #2E5B9C; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Sea Breeze Skirt - Chân váy xòe tafta</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.190.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Graceful Pants - Quần dài Tuytsi.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #C4B094; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            <li class="list-inline-item">
+              <div class="box-3 position-relative"
+                style="width: 18px; height: 18px; background-color: #2E2E2E; border-radius: 50%; background-size: 100%;">
+                </div>
+            </li>
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Graceful Pants - Quần dài Tuytsi</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">990.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- row 2  -->
+    <div class="row product-list-lb-bl">
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Áo sơ mi lụa họa tiết.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #254876; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Áo sơ mi lụa họa tiết</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">750.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Elegant White - Chân váy bút chì.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #fff;border: 1px solid #ccc; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #000;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Elegant White - Chân váy bút chì</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.290.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Floral Bodycon Dress - Đầm ôm họa tiết.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            <li class="list-inline-item">
+              <div class="box-1 d-flex align-items-center"
+                style="width: 18px; height: 18px; background-color: #8D7A19; border-radius: 50%;"></div>
+
+            </li>
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #25497C; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Floral Bodycon Dress - Đầm ôm họa tiết</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.590.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End row 2  -->
+    <!-- Row 3 -->
+    <div class="row product-list-lb-bl">
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Refined Skirt - Chân váy bút chì dáng dài.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            <li class="list-inline-item">
+              <div class="box-1 d-flex align-items-center"
+                style="width: 18px; height: 18px; background-color: #2D2D2D; border-radius: 50%;"></div>
+
+            </li>
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #5B5240; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Refined Skirt - Chân váy bút chì dáng dài</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.350.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Ocean Breeze Dress - Đầm lụa xòe.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #8E9DA3; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Ocean Breeze Dress - Đầm lụa xòe</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.790.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Butterfly Flare Dress - Đầm lụa họa tiết.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #323250; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            <li class="list-inline-item">
+              <div class="box-1 d-flex align-items-center"
+                style="width: 18px; height: 18px; background-color: #791638; border-radius: 50%;"></div>
+
+            </li>
+           
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Butterfly Flare Dress - Đầm lụa họa tiết</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.990.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Row 3 -->
+    <!-- Row 4 -->
+    <div class="row product-list-lb-bl">
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Sonata Vest - Áo Vest ôm Tuytsi.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            <li class="list-inline-item">
+              <div class="box-1 d-flex align-items-center"
+                style="width: 18px; height: 18px; background-color: #FEFEFE;border: 1px solid #ccc; border-radius: 50%;"></div>
+
+            </li>
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #2D2D2D; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Sonata Vest - Áo Vest ôm Tuytsi</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.990.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Graceful V Knit - Áo Gile Tuytsi.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #C4B096; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            <li class="list-inline-item">
+              <div class="box-3 position-relative"
+                style="width: 18px; height: 18px; background-color: #2D2D2D; border-radius: 50%; background-size: 100%;">
+                </div>
+            </li>
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Graceful V Knit - Áo Gile Tuytsi</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.390.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/White Sonata Dress - Đầm suông Organza.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #EDECED; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">White Sonata Dress - Đầm suông Organza</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.890.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Row 4 -->
+    <!-- Row 5 -->
+    <div class="row product-list-lb-bl">
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Graceful Bloom Dress - Đầm Tuytsi đuôi cá.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            <li class="list-inline-item">
+              <div class="box-1 d-flex align-items-center"
+                style="width: 18px; height: 18px; background-color: #EFE9DD; border-radius: 50%;"></div>
+
+            </li>
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #5B5240; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Graceful Bloom Dress - Đầm Tuytsi đuôi cá</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.890.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Celestial Bloom Shirt - Áo sơ mi lụa.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #fff;border: 1px solid #ccc; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #000;"></i></div>
+            </li>
+            
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Celestial Bloom Shirt - Áo sơ mi lụa</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.290.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="img-lb-bl">
+          <img src="./assets/images/Sonata Skirt - Chân váy lụa đuôi cá.webp" alt="" style="width: 100%;">
+        </div>
+        <div class="change-color-img mt-2 d-flex justify-content-between">
+          <ul class="list-unstyled mb-0">
+            
+            <li class="list-inline-item">
+              <div class="box-2 position-relative"
+                style="width: 18px; height: 18px; background-color: #2D2D2D; border-radius: 50%; background-size: 100%;">
+                <i class="fa-solid fa-check position-absolute"
+                  style="font-size: 12px; opacity: 80%; top: 3px; left: 3px; color: #fff;"></i></div>
+            </li>
+
+          </ul>
+          <div class=" position-relative " style="width: 18px; height: 18px;">
+            <i class="bi bi-heart position-absolute"></i>
+          </div>
+        </div>
+        <h3 class="product-title">
+          <a href="#"
+            style="font-size: 14px ; color: #57585A;margin-bottom: 10px;font-weight: 400;line-height: 16px;">Sonata Skirt - Chân váy lụa đuôi cá</a>
+        </h3>
+
+        <div class="product-price d-flex justify-content-between align-items-center">
+          <div class="price" style="color: #3E3E3F;font-weight: 600;font-size: 16px;line-height: 24px;">1.290.000đ</div>
+          <div class="card"><i class="bi bi-handbag"
+              style=" width: 32px; height: 32px; padding: 5px; background: #221F20; color: #fff; text-align: center; border-radius: 8px 0;     border: 1px solid transparent;"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Row 5 -->
+  </div>
+
+  <!-- End Content -->
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="inner-top">
+        <div class="title-form">Đăng ký ngay để Nhận thông tin các chương trình của IVY moda</div>
+        <form action="" class="inner-form">
+          <input type="email" placeholder="Nhập địa chỉ email">
+          <button type="submit">Đăng ký ngay</button>
+        </form>
+      </div>
+      <div class="inner-middle">
+        <nav class="inner-links">
+          <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Thời trang nam</a></li>
+            <li><a href="#">Thời trang nữ</a></li>
+            <li><a href="#">Bộ sưu tập</a></li>
+            <li><a href="#">Về chúng tôi</a></li>
+          </ul>
+        </nav>
+        <nav class="inner-socials">
+          <ul>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="inner-bottom">
+        <div class="inner-copyright">©IVYmoda All rights reserved</div>
+        <div class="inner-logo">
+          <img src="./assets/images/logo.png" alt="">
+        </div>
+        <nav class="inner-links">
+          <ul>
+            <li><a href="#">Điều khoản dịch vụ</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <!-- Meta mobile -->
+  <div class="meta-mobile">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="inner-item">
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <span>Tìm kiếm</span>
+        </div>
+        <div class="inner-item">
+          <a href="#"><i class="fa-regular fa-user"></i></a>
+          <span>Đăng nhập</span>
+        </div>
+        <div class="inner-item">
+          <a href="#"><i class="fa-solid fa-headphones"></i></a>
+          <span>Trợ giúp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Meta mobile -->
+
+
+
+
+
+
+
+  <!-- Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- JS -->
+  <script src="./assets/js/swiper.js"></script>
+
+  <!-- Jquery -->
+  <script src="./assets/js/jquery.js"></script>
+</body>
+
+</html>

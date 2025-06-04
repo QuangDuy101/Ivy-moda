@@ -1873,3 +1873,95 @@ img {
 }
 
 /* End Section 5 - Cart Detail */
+
+/* Css trang sale-t5 */
+
+.icon-arrow {
+  transition: transform 0.3s ease;
+}
+
+.icon-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.list a:hover {
+  font-weight: 600;      
+  font-size: 15px;       
+  color: #000 !important;
+            
+}
+
+.list-size span.active {
+  border: 1px solid #000 !important ;
+  color: #000 !important;
+}
+
+/* discount-rate */
+/* Tùy chỉnh radio */
+.discount-rate .form-check-input {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #7d8699;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Icon check sẽ được thêm vào */
+.discount-rate .form-check-input.checked::before {
+  content: "\f00c"; /* mã của fa-check */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: white;
+  background-color: black;
+  
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  width: 19px;
+  height: 18px;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+}
+.discount-rate .form-check-input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Nâng cao  */
+/* Tùy chỉnh radio */
+.lift-high-sub .form-check-input {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #7d8699;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Icon check sẽ được thêm vào */
+/* Icon check sẽ được thêm vào */
+.lift-high-sub .form-check-input.checked::before {
+    content: "\f00c"; /* mã của fa-check */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    width: 19px;
+    height: 18px;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+}
+.lift-high-sub .form-check-input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Css trang sale-t5 */

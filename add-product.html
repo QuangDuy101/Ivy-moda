@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" />
+  <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/dashboard/css/style.css" />
+  <link rel="stylesheet" href="assets/dashboard/css/manage-product.css" />
+  <title>Thêm sản phẩm</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+    <div class="inner-wrap">
+      <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg" /><span>6</span></div>
+      <div class="inner-account">
+        <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg" /></div>
+        <div class="inner-text">
+          <div class="inner-name">Ngo Quang Ha</div>
+          <div class="inner-role">Admin</div>
+        </div>
+      </div>
+      <button class="inner-menu-mobile">
+        <i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+  <nav class="sider">
+    <ul class="inner-menu">
+      <li> <a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+      <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
+      <li><a class="active" href="manage-product.html"><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+      <li><a href=""><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+      <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+    </ul>
+    <hr />
+    <ul class="inner-menu">
+      <li><a href="setting-list.html"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+      <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất </a></li>
+    </ul>
+  </nav>
+  <div class="sider-overlay"></div>
+  <main id="main" class="main">
+    <h1 class="box-title">Thêm sản phẩm</h1>
+    <div class="card">
+      <div class="card-body">
+        <form id="addProductForm">
+          <div class="row mt-4 mb-4">
+            <div class="col-md-6 d-flex align-items-center position-relative mb-3 ">
+              <label for="productName" class="form-label" style="width: 150px;">Tên sản phẩm</label>
+              <input type="text" class="form-control" id="productName"
+                placeholder="Golden Hour Skirt - Chân váy maxi vàng hoa" style="margin-left: 40px;">
+                <div class="text-danger small position-absolute" style="top: 100%; left: 162px;" id="error-productName"></div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+              <label for="productCode" class="form-label" style="width: 150px;">Mã sản phẩm</label>
+              <input type="text" class="form-control" id="productCode" placeholder="31B0156">
+              <div class="text-danger small position-absolute" style="top: 100%; left: 130px;" id="error-productCode"></div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+              <label for="productPrice" class="form-label" style="width: 150px;">Giá</label>
+              <input type="number" class="form-control" id="productPrice" placeholder="" style="margin-left: 40px;">
+              <div class="text-danger small position-absolute" style="top: 100%; left: 162px;" id="error-productPrice"></div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+              <label for="productCategory" class="form-label" style="width: 150px;">Danh mục</label>
+              <select class="form-select" id="productCategory">
+                <option selected>Chọn danh mục</option>
+                <option>Váy</option>
+                <option>Áo</option>
+                <option>Quần</option>
+                <option>Set đồ</option>
+              </select>
+              <div class="text-danger small position-absolute" style="top: 100%; left: 130px;" id="error-productCategory"></div>
+            </div>
+            
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+              <label for="productSize" class="form-label" style="width: 150px;" >Kích cỡ</label>
+              <input type="text" class="form-control" id="productSize" placeholder="S,M,L" style="margin-left: 40px;">
+              <div class="text-danger small position-absolute" style="top: 100%; left: 162px;" id="error-productSize"></div>
+            </div>
+            
+              <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+              <label for="productColor" class="form-label" style="width: 150px;">Màu sắc</label>
+              <input type="text" class="form-control" id="productColor" placeholder="">
+              <div class="text-danger small position-absolute" style="top: 100%; left: 130px;" id="error-productColor"></div>
+            </div>
+            
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+            <label for="productImage" class="form-label" style="width: 150px;">Ảnh sản phẩm</label>
+            <input class="form-control" type="file" id="productImage" multiple   style="margin-left: 40px;"  >
+            <div class="text-danger small position-absolute" style="top: 100%; left: 162px;" id="error-productImage"></div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+              <label for="productQuantity" class="form-label" style="width: 150px;">Số lượng</label>
+              <input type="number" class="form-control" id="productQuantity" placeholder="Nhập số lượng">
+              <div class="text-danger small position-absolute" style="top: 100%; left: 130px;" id="error-productQuantity"></div>
+            </div>
+          </div>
+
+          
+
+          <div class="row mb-3 position-relative">
+            <label for="about" class="col-md-4 col-lg-3 col-form-label " style="width: 150px;">Mô tả sản phẩm </label>
+            <div class="col-md-8 col-lg-9" style="width: 1050px;">
+
+              <textarea class="tinymce-editor">
+                            
+
+              </textarea>
+
+            </div>
+            <div class="text-danger small position-absolute" style="top: 100%; left: 150px;" id="error-productDescription"></div>
+          </div>
+          <div class="d-flex justify-content-between mt-4">
+            <a href="manage-product.html" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Quay lại danh sách
+            </a>
+            <button type="submit" class="btn btn-primary " >Thêm sản phẩm</button>
+          </div>
+
+          
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <script
+    src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+  <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+  <script src="assets/dashboard/js/nqh-script.js"> </script>
+  <script src="assets/dashboard/tinymce/tinymce.min.js"></script>
+
+  <script src="assets/dashboard/js/products-list.js"> </script>
+  <script src="assets/dashboard/js/add-product.js"> </script>
+</body>
+
+</html>

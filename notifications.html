@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" />
+  <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css" />
+  <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="/assets/dashboard/js/tinymce-config.js"> </script>
+  <link rel="stylesheet" href="/assets/dashboard/css/style.css">
+  <link rel="stylesheet" href="/assets/dashboard/css/notifications.css">
+  <title>Tổng quan</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+    <div class="inner-wrap">
+      <div class="inner-notify"> <img src="/assets/dashboard/images/icon-bell.svg" /><span>6</span></div>
+      <div class="inner-account">
+        <div class="inner-avatar"> <img src="/assets/dashboard/images/admin.jpg" /></div>
+        <div class="inner-text">
+          <div class="inner-name">Ngo Quang Ha</div>
+          <div class="inner-role">Admin</div>
+        </div>
+      </div>
+      <button class="inner-menu-mobile">
+        <i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+  <nav class="sider">
+    <ul class="inner-menu">
+      <li> <a class="active" href=""><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+      <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
+      <li><a href=""><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+      <li><a href="order-manager.html"><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+      <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+      <li><a href="reviews-comment.html"><i class="fa-solid fa-comment"></i> Xem reviews</a></li>
+    </ul>
+    <hr />
+    <ul class="inner-menu">
+      <li><a href="setting-list.html"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+      <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất </a></li>
+    </ul>
+  </nav>
+  <div class="sider-overlay"></div>
+  <main class="main">
+    <h1 class="box-title">Thông báo</h1>
+    <div class="section-1">
+      <div class="inner-item">
+        <div class="inner-icon"> <a href="notifications.html"><img src="/assets/dashboard/images/icon-bell.svg" /></a></div>
+        <div class="inner-content">
+          <div class="inner-name">Thông báo</div>
+          <div class="inner-number">120</div>
+        </div>
+      </div>
+      <div class="inner-item">
+        <div class="inner-icon"> <img src="/assets/dashboard/images/icon-cauti.png" /></div>
+        <div class="inner-content">
+          <div class="inner-name">Cảnh báo</div>
+          <div class="inner-number">36</div>
+        </div>
+      </div>
+      <div class="inner-item">
+        <div class="inner-icon"> <img src="/assets/dashboard/images/icon-truck.jpg" /></div>
+        <div class="inner-content">
+          <div class="inner-name">Thành công</div>
+          <div class="inner-number">199</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-2">
+      <div class=" mb-5 p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded-md shadow-md flex items-start gap-3"
+        data-aos="fade-right">
+        <i class="fas fa-bell text-yellow-600 mt-1"></i>
+        <p><strong>Thông báo:</strong> Hệ thống sẽ bảo trì vào 22:00 tối nay.</p>
+        <h5 style="margin-left: auto; font-size: 14px; color: gray;">12 phút trước(6/7/2024)</h5>
+      </div>
+
+      <div class="mb-5 p-4 bg-green-100 border-l-4 border-green-500 rounded-md shadow-md flex items-start gap-3"
+        data-aos="fade-right" data-aos-delay="100">
+        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+        <p><strong>Thành công:</strong> Cập nhật sản phẩm thành công.</p>
+         <h5 style="margin-left: auto; font-size: 14px; color: gray;">32 phút trước(6/7/2024)</h5>
+      </div>
+
+      <div class="mb-5 p-4 bg-blue-100 border-l-4 border-blue-500 rounded-md shadow-md flex items-start gap-3"
+        data-aos="fade-right" data-aos-delay="200">
+        <i class="fas fa-truck text-blue-600 mt-1"></i>
+        <p><strong>Giao hàng:</strong> Bạn vừa nhận đơn hàng #11235.</p>
+         <h5 style="margin-left: auto; font-size: 14px; color: gray;">59 phút trước(6/7/2024)</h5>
+      </div>
+
+      <div class=" mb-5 p-4 bg-red-100 border-l-4 border-red-500 rounded-md shadow-md flex items-start gap-3"
+        data-aos="fade-right" data-aos-delay="300">
+        <i class="fas fa-exclamation-triangle text-red-600 mt-1"></i>
+        <p><strong>Lỗi:</strong> Không thể kết nối tới máy chủ.</p>
+         <h5 style="margin-left: auto; font-size: 14px; color: gray;">4 giờ trước(6/7/2024)</h5>
+      </div>
+      <div class="mb-5 p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded-md shadow-md flex items-start gap-3"
+        data-aos="fade-right">
+        <i class="fas fa-bell text-yellow-600 mt-1"></i>
+        <p><strong>Thông báo:</strong> Hệ thống sẽ bảo trì vào 22:00 tối nay.</p>
+         <h5 style="margin-left: auto; font-size: 14px; color: gray;">10 giờ trước(6/7/2024)</h5>
+      </div>
+
+      <div class="mb-5 p-4 bg-green-100 border-l-4 border-green-500 rounded-md shadow-md flex items-start gap-3"
+        data-aos="fade-right" data-aos-delay="100">
+        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+        <p><strong>Thành công:</strong> Cập nhật sản phẩm thành công.</p>
+         <h5 style="margin-left: auto; font-size: 14px; color: gray;">25 giờ trước(5/7/2024)</h5>
+      </div>
+
+
+  </main>
+  <script
+    src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+  <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+  <script src="/assets/dashboard/js/nqh-script.js"> </script>
+   <script>AOS.init();</script>
+ <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

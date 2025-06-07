@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" />
+  <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css" />
+  <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="js/tinymce-config.js"> </script>
+  <link rel="stylesheet" href="/assets/dashboard/css/style.css">
+  <link rel="stylesheet" href="/assets/dashboard/css/reviews-comment.css">
+  <title>Tổng quan</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+    <div class="inner-wrap">
+      <div class="inner-notify"> <a href="notifications.html"><img src="/assets/dashboard/images/icon-bell.svg" /></a><span>6</span></div>
+      <div class="inner-account">
+        <div class="inner-avatar"> <img src="/assets/dashboard/images/admin.jpg" /></div>
+        <div class="inner-text">
+          <div class="inner-name">Ngo Quang Ha</div>
+          <div class="inner-role">Admin</div>
+        </div>
+      </div>
+      <button class="inner-menu-mobile">
+        <i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+  <nav class="sider">
+    <ul class="inner-menu">
+      <li> <a class="active" href=""><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+      <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
+      <li><a href=""><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+      <li><a href="order-manager.html"><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+      <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+      <li><a href="" class="active"><i class="fa-solid fa-comment"></i> Xem reviews</a></li>
+    </ul>
+    <hr />
+    <ul class="inner-menu">
+      <li><a href="setting-list.html"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+      <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất </a></li>
+    </ul>
+  </nav>
+  <div class="sider-overlay"></div>
+  <main class="main">
+
+    <h1 class="box-title">Tổng quan reviews</h1>
+    <div class="section-1">
+      <div class="inner-item">
+        <div class="search-container">
+          <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm...">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+      <div class="inner-item">
+        <select id="filterRating" class="filter-select">
+          <option value="all">Tất cả số sao</option>
+          <option value="5">5 sao</option>
+          <option value="4">4 sao</option>
+          <option value="3">3 sao</option>
+          <option value="2">2 sao</option>
+          <option value="1">1 sao</option>
+        </select>
+      </div>
+    </div>
+    <div class="section-2">
+      <div class="reviews-container">
+        <div id="reviewsList" class="reviews-list">
+          <!-- Review items hard-coded -->
+          <div class="review-card" data-id="1">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Nguyễn Văn A</h3>
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Nguyễn Văn A" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class=" fas fa-solid fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Sản phẩm rất tốt, giao hàng nhanh!</p>
+              <p class="review-date">Ngày gửi: 06/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(1)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(1)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="2">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Trần Thị B</h3>
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Trần Thị B" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Tuyệt vời, chất lượng vượt mong đợi!</p>
+              <p class="review-date">Ngày gửi: 05/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(2)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(2)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="3">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Lê Văn C</h3>
+                <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Lê Văn C" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="far fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Sản phẩm ổn, nhưng bao bì cần cải thiện.</p>
+              <p class="review-date">Ngày gửi: 04/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(3)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(3)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="4">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Phạm Thị D</h3>
+                <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Phạm Thị D" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Rất hài lòng, sẽ mua lại!</p>
+              <p class="review-date">Ngày gửi: 03/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(4)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(4)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="5">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Hoàng Văn E</h3>
+                <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Hoàng Văn E" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                  class="far fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Hàng hơi lỗi, cần kiểm tra kỹ hơn.</p>
+              <p class="review-date">Ngày gửi: 02/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(5)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(5)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="6">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Đỗ Thị F</h3>
+                <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Đỗ Thị F" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Tốt, nhưng giao hàng hơi chậm.</p>
+              <p class="review-date">Ngày gửi: 01/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(6)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(6)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="7">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Vũ Văn G</h3>
+                <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Vũ Văn G" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Sản phẩm đẹp, đúng mô tả!</p>
+              <p class="review-date">Ngày gửi: 31/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(7)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(7)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="8">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Ngô Thị H</h3>
+                <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Ngô Thị H" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="far fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Bình thường, không đặc biệt.</p>
+              <p class="review-date">Ngày gửi: 30/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(8)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(8)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="9">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Bùi Văn I</h3>
+                <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Bùi Văn I" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Chất lượng tốt, giá hợp lý.</p>
+              <p class="review-date">Ngày gửi: 29/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(9)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(9)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="10">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Lý Thị K</h3>
+                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Lý Thị K" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Rất thích, sẽ giới thiệu bạn bè!</p>
+              <p class="review-date">Ngày gửi: 28/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(10)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(10)">Xóa</button>
+            </div>
+          </div>
+          <div class="review-card" data-id="11">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Nguyễn Văn A</h3>
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Nguyễn Văn A" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class=" fas fa-solid fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Sản phẩm rất tốt, giao hàng nhanh!</p>
+              <p class="review-date">Ngày gửi: 06/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(11)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(11)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="12">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Trần Thị B</h3>
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Trần Thị B" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Tuyệt vời, chất lượng vượt mong đợi!</p>
+              <p class="review-date">Ngày gửi: 05/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(12)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(12)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="13">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Lê Văn C</h3>
+                <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Lê Văn C" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="far fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Sản phẩm ổn, nhưng bao bì cần cải thiện.</p>
+              <p class="review-date">Ngày gửi: 04/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(13)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(13)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="14">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Phạm Thị D</h3>
+                <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Phạm Thị D" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Rất hài lòng, sẽ mua lại!</p>
+              <p class="review-date">Ngày gửi: 03/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(14)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(14)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="15">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Hoàng Văn E</h3>
+                <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Hoàng Văn E" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                  class="far fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Hàng hơi lỗi, cần kiểm tra kỹ hơn.</p>
+              <p class="review-date">Ngày gửi: 02/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(15)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(15)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="16">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Đỗ Thị F</h3>
+                <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Đỗ Thị F" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Tốt, nhưng giao hàng hơi chậm.</p>
+              <p class="review-date">Ngày gửi: 01/06/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(16)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(16)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="17">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Vũ Văn G</h3>
+                <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Vũ Văn G" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Sản phẩm đẹp, đúng mô tả!</p>
+              <p class="review-date">Ngày gửi: 31/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(17)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(17)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="18">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Ngô Thị H</h3>
+                <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Ngô Thị H" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="far fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Bình thường, không đặc biệt.</p>
+              <p class="review-date">Ngày gửi: 30/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(18)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(18)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="19">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Bùi Văn I</h3>
+                <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Bùi Văn I" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+              <p class="review-comment">Chất lượng tốt, giá hợp lý.</p>
+              <p class="review-date">Ngày gửi: 29/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(19)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(19)">Xóa</button>
+            </div>
+          </div>
+
+          <div class="review-card" data-id="20">
+            <div class="review-content">
+              <div class="user-info">
+                <h3 class="user-name">Lý Thị K</h3>
+                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Lý Thị K" class="user-avatar">
+              </div>
+              <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-comment">Rất thích, sẽ giới thiệu bạn bè!</p>
+              <p class="review-date">Ngày gửi: 28/05/2025</p>
+            </div>
+            <div class="review-actions">
+              <button class="approve-btn" onclick="approveReview(20)">Phê duyệt</button>
+              <button class="delete-btn" onclick="deleteReview(20)">Xóa</button>
+            </div>
+          </div>
+          <div id="reviewsList">
+            <!-- Các thẻ .review-card ở đây -->
+          </div>
+
+  </main>
+
+  </main>
+  <script
+    src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+  <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+
+  <script src="/assets/dashboard/js/nqh-script.js"> </script>
+  <script src="/assets/dashboard/js/review-comment.js"></script>
+
+
+
+</body>
+
+</html>

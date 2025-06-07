@@ -1,263 +1,269 @@
-<!DOCTYPE html >
-<html> 
-  <head> 
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css"/>
-    <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-    <script src="assets/dashboard/js/tinymce-config.js"> </script>
-    <link rel="stylesheet" href="assets/dashboard/css/style.css"/>
-    <title>Tổng quan</title>
-  </head>
-  <body> 
-    <header class="header"> 
-      <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
-      <div class="inner-wrap"> 
-        <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg"/><span>6</span></div>
-        <div class="inner-account"> 
-          <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg"/></div>
-          <div class="inner-text"> 
-            <div class="inner-name">Ngo Quang Ha</div>
-            <div class="inner-role">Admin</div>
-          </div>
-        </div>
-        <button class="inner-menu-mobile">
-           <i class="fa-solid fa-bars"></i></button>
-      </div>
-    </header>
-    <nav class="sider"> 
-      <ul class="inner-menu"> 
-        <li> <a class="active" href=""><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
-        <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
-        <li><a href=""><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
-        <li><a href=""><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
-        <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
-      </ul>
-      <hr/>
-      <ul class="inner-menu"> 
-        <li><a href="setting-list.html"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
-        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất  </a></li>
-      </ul>
-    </nav>
-    <div class="sider-overlay"></div>
-    <main class="main">
-      <h1 class="box-title">Tổng quan</h1>
-      <div class="section-1">
-        <div class="inner-item"> 
-          <div class="inner-icon"> <img src="assets/dashboard/images/Icon-user.svg"/></div>
-          <div class="inner-content"> 
-            <div class="inner-name">Người dùng</div>
-            <div class="inner-number">1.200</div>
-          </div>
-        </div>
-        <div class="inner-item"> 
-          <div class="inner-icon"> <img src="assets/dashboard/images/Icon-order.svg"/></div>
-          <div class="inner-content"> 
-            <div class="inner-name">Đơn hàng</div>
-            <div class="inner-number">3.600</div>
-          </div>
-        </div>
-        <div class="inner-item"> 
-          <div class="inner-icon"> <img src="assets/dashboard/images/Icon-chart.svg"/></div>
-          <div class="inner-content"> 
-            <div class="inner-name">Doanh thu</div>
-            <div class="inner-number">300.000.000đ</div>
-          </div>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" />
+  <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css" />
+  <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="assets/dashboard/js/tinymce-config.js"> </script>
+  <link rel="stylesheet" href="assets/dashboard/css/style.css" />
+  <title>Tổng quan</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+    <div class="inner-wrap">
+      <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg" /><span>6</span></div>
+      <div class="inner-account">
+        <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg" /></div>
+        <div class="inner-text">
+          <div class="inner-name">Ngo Quang Ha</div>
+          <div class="inner-role">Admin</div>
         </div>
       </div>
-      <div class="section-2"> 
-        <div class="inner-head"> 
-          <h2 class="inner-title">Biểu đồ doanh thu</h2>
-          <div class="inner-filter"> 
-            <input type="month"/>
-          </div>
-        </div>
-        <div class="inner-chart">
-          <canvas id="chart1"></canvas>
+      <button class="inner-menu-mobile">
+        <i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+  <nav class="sider">
+    <ul class="inner-menu">
+      <li> <a class="active" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+      <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
+      <li><a href="manage-product.html"><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+      <li><a href=""><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+      <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+    </ul>
+    <hr />
+    <ul class="inner-menu">
+      <li><a href="setting-list.html"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+      <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất </a></li>
+    </ul>
+  </nav>
+  <div class="sider-overlay"></div>
+  <main class="main">
+    <h1 class="box-title">Tổng quan</h1>
+    <div class="section-1">
+      <div class="inner-item">
+        <div class="inner-icon"> <img src="assets/dashboard/images/Icon-user.svg" /></div>
+        <div class="inner-content">
+          <div class="inner-name">Người dùng</div>
+          <div class="inner-number">1.200</div>
         </div>
       </div>
-      <div class="section-3"> 
-        <h2 class="inner-title">Đơn hàng mới</h2>
-        <div class="table-1"> 
-          <table> 
-            <thead> 
-              <tr> 
-                <th>Mã</th>
-                <th>Thông tin khách</th>
-                <th>Danh sách đơn hàng</th>
-                <th>Thanh toán</th>
-                <th>Trạng thái</th>
-                <th class="inner-text-right">Ngày đặt</th>
-              </tr>
-            </thead>
-            <tbody> 
-              <tr> 
-                <td> 
-                  <div class="inner-code">OD000001</div>
-                </td>
-                <td>
-                  <div>Họ tên: Lê Văn A</div>
-                  <div>SĐT: 0123456789</div>
-                  <div>Ghi chú: Test...</div>
-                </td>
-                <td>
-                  <div class="inner-list"> 
-                    <div class="inner-item"> 
-                      <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp"/></div>
-                      <div class="inner-content"> 
-                        <div class="inner-name">Elegant Silk Blouse</div>
-                        <div class="inner-quantity"> 
-                          <div>Số lượng: 1</div>
-                          <div>Kích cỡ: L</div>
-                          <div>Màu sắc: Đỏ</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner-item"> 
-                      <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp"/></div>
-                      <div class="inner-content"> 
-                        <div class="inner-name">Elegant Silk Blouse</div>
-                        <div class="inner-quantity"> 
-                          <div>Số lượng: 1</div>
-                          <div>Kích cỡ: L</div>
-                          <div>Màu sắc: Đỏ</div>
-                        </div>
+      <div class="inner-item">
+        <div class="inner-icon"> <img src="assets/dashboard/images/Icon-order.svg" /></div>
+        <div class="inner-content">
+          <div class="inner-name">Đơn hàng</div>
+          <div class="inner-number">3.600</div>
+        </div>
+      </div>
+      <div class="inner-item">
+        <div class="inner-icon"> <img src="assets/dashboard/images/Icon-chart.svg" /></div>
+        <div class="inner-content">
+          <div class="inner-name">Doanh thu</div>
+          <div class="inner-number">300.000.000đ</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-2">
+      <div class="inner-head">
+        <h2 class="inner-title">Biểu đồ doanh thu</h2>
+        <div class="inner-filter">
+          <input type="month" />
+        </div>
+      </div>
+      <div class="inner-chart">
+        <canvas id="chart1"></canvas>
+      </div>
+    </div>
+    <div class="section-3">
+      <h2 class="inner-title">Đơn hàng mới</h2>
+      <div class="table-1">
+        <table>
+          <thead>
+            <tr>
+              <th>Mã</th>
+              <th>Thông tin khách</th>
+              <th>Danh sách đơn hàng</th>
+              <th>Thanh toán</th>
+              <th>Trạng thái</th>
+              <th class="inner-text-right">Ngày đặt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="inner-code">OD000001</div>
+              </td>
+              <td>
+                <div>Họ tên: Lê Văn A</div>
+                <div>SĐT: 0123456789</div>
+                <div>Ghi chú: Test...</div>
+              </td>
+              <td>
+                <div class="inner-list">
+                  <div class="inner-item">
+                    <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp" /></div>
+                    <div class="inner-content">
+                      <div class="inner-name">Elegant Silk Blouse</div>
+                      <div class="inner-quantity">
+                        <div>Số lượng: 1</div>
+                        <div>Kích cỡ: L</div>
+                        <div>Màu sắc: Đỏ</div>
                       </div>
                     </div>
                   </div>
-                </td>
-                <td>
-                  <div>Tổng tiền: 10.000.000đ</div>
-                  <div>Giảm: 400.000đ</div>
-                  <div>Mã giảm: THOITRANG2025</div>
-                  <div>Thanh toán: 9.600.000đ</div>
-                  <div>PTTT: Ví Momo</div>
-                  <div>TTTT: Đã thanh toán</div>
-                </td>
-                <td>
-                  <div class="badge badge-orange">Khởi tạo</div>
-                </td>
-                <td class="inner-text-right">
-                  <div>16:20</div>
-                  <div>01/01/2025</div>
-                </td>
-              </tr>
-              <tr> 
-                <td> 
-                  <div class="inner-code">OD000002</div>
-                </td>
-                <td>
-                  <div>Họ tên: Lê Văn A</div>
-                  <div>SĐT: 0123456789</div>
-                  <div>Ghi chú: Test...</div>
-                </td>
-                <td>
-                  <div class="inner-list"> 
-                    <div class="inner-item"> 
-                      <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp"/></div>
-                      <div class="inner-content"> 
-                        <div class="inner-name">Elegant Silk Blouse</div>
-                        <div class="inner-quantity"> 
-                          <div>Số lượng: 1</div>
-                          <div>Kích cỡ: L</div>
-                          <div>Màu sắc: Đỏ</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner-item"> 
-                      <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp"/></div>
-                      <div class="inner-content"> 
-                        <div class="inner-name">Elegant Silk Blouse</div>
-                        <div class="inner-quantity"> 
-                          <div>Số lượng: 1</div>
-                          <div>Kích cỡ: L</div>
-                          <div>Màu sắc: Đỏ</div>
-                        </div>
+                  <div class="inner-item">
+                    <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp" /></div>
+                    <div class="inner-content">
+                      <div class="inner-name">Elegant Silk Blouse</div>
+                      <div class="inner-quantity">
+                        <div>Số lượng: 1</div>
+                        <div>Kích cỡ: L</div>
+                        <div>Màu sắc: Đỏ</div>
                       </div>
                     </div>
                   </div>
-                </td>
-                <td>
-                  <div>Tổng tiền: 10.000.000đ</div>
-                  <div>Giảm: 400.000đ</div>
-                  <div>Mã giảm: THOITRANG2025</div>
-                  <div>Thanh toán: 9.600.000đ</div>
-                  <div>PTTT: Ví Momo</div>
-                  <div>TTTT: Đã thanh toán</div>
-                </td>
-                <td>
-                  <div class="badge badge-green">Đã duyệt</div>
-                </td>
-                <td class="inner-text-right">
-                  <div>16:20</div>
-                  <div>01/01/2025</div>
-                </td>
-              </tr>
-              <tr> 
-                <td> 
-                  <div class="inner-code">OD000003</div>
-                </td>
-                <td>
-                  <div>Họ tên: Lê Văn A</div>
-                  <div>SĐT: 0123456789</div>
-                  <div>Ghi chú: Test...</div>
-                </td>
-                <td>
-                  <div class="inner-list"> 
-                    <div class="inner-item"> 
-                      <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp"/></div>
-                      <div class="inner-content"> 
-                        <div class="inner-name">Elegant Silk Blouse</div>
-                        <div class="inner-quantity"> 
-                          <div>Số lượng: 1</div>
-                          <div>Kích cỡ: L</div>
-                          <div>Màu sắc: Đỏ</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner-item"> 
-                      <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp"/></div>
-                      <div class="inner-content"> 
-                        <div class="inner-name">Elegant Silk Blouse</div>
-                        <div class="inner-quantity"> 
-                          <div>Số lượng: 1</div>
-                          <div>Kích cỡ: L</div>
-                          <div>Màu sắc: Đỏ</div>
-                        </div>
+                </div>
+              </td>
+              <td>
+                <div>Tổng tiền: 10.000.000đ</div>
+                <div>Giảm: 400.000đ</div>
+                <div>Mã giảm: THOITRANG2025</div>
+                <div>Thanh toán: 9.600.000đ</div>
+                <div>PTTT: Ví Momo</div>
+                <div>TTTT: Đã thanh toán</div>
+              </td>
+              <td>
+                <div class="badge badge-orange">Khởi tạo</div>
+              </td>
+              <td class="inner-text-right">
+                <div>16:20</div>
+                <div>01/01/2025</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="inner-code">OD000002</div>
+              </td>
+              <td>
+                <div>Họ tên: Lê Văn A</div>
+                <div>SĐT: 0123456789</div>
+                <div>Ghi chú: Test...</div>
+              </td>
+              <td>
+                <div class="inner-list">
+                  <div class="inner-item">
+                    <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp" /></div>
+                    <div class="inner-content">
+                      <div class="inner-name">Elegant Silk Blouse</div>
+                      <div class="inner-quantity">
+                        <div>Số lượng: 1</div>
+                        <div>Kích cỡ: L</div>
+                        <div>Màu sắc: Đỏ</div>
                       </div>
                     </div>
                   </div>
-                </td>
-                <td>
-                  <div>Tổng tiền: 10.000.000đ</div>
-                  <div>Giảm: 400.000đ</div>
-                  <div>Mã giảm: THOITRANG2025</div>
-                  <div>Thanh toán: 9.600.000đ</div>
-                  <div>PTTT: Ví Momo</div>
-                  <div>TTTT: Đã thanh toán</div>
-                </td>
-                <td>
-                  <div class="badge badge-red">Đã hủy</div>
-                </td>
-                <td class="inner-text-right">
-                  <div>16:20</div>
-                  <div>01/01/2025</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                  <div class="inner-item">
+                    <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp" /></div>
+                    <div class="inner-content">
+                      <div class="inner-name">Elegant Silk Blouse</div>
+                      <div class="inner-quantity">
+                        <div>Số lượng: 1</div>
+                        <div>Kích cỡ: L</div>
+                        <div>Màu sắc: Đỏ</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>Tổng tiền: 10.000.000đ</div>
+                <div>Giảm: 400.000đ</div>
+                <div>Mã giảm: THOITRANG2025</div>
+                <div>Thanh toán: 9.600.000đ</div>
+                <div>PTTT: Ví Momo</div>
+                <div>TTTT: Đã thanh toán</div>
+              </td>
+              <td>
+                <div class="badge badge-green">Đã duyệt</div>
+              </td>
+              <td class="inner-text-right">
+                <div>16:20</div>
+                <div>01/01/2025</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="inner-code">OD000003</div>
+              </td>
+              <td>
+                <div>Họ tên: Lê Văn A</div>
+                <div>SĐT: 0123456789</div>
+                <div>Ghi chú: Test...</div>
+              </td>
+              <td>
+                <div class="inner-list">
+                  <div class="inner-item">
+                    <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp" /></div>
+                    <div class="inner-content">
+                      <div class="inner-name">Elegant Silk Blouse</div>
+                      <div class="inner-quantity">
+                        <div>Số lượng: 1</div>
+                        <div>Kích cỡ: L</div>
+                        <div>Màu sắc: Đỏ</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inner-item">
+                    <div class="inner-image"> <img src="assets/dashboard/images/nqh-product-1.webp" /></div>
+                    <div class="inner-content">
+                      <div class="inner-name">Elegant Silk Blouse</div>
+                      <div class="inner-quantity">
+                        <div>Số lượng: 1</div>
+                        <div>Kích cỡ: L</div>
+                        <div>Màu sắc: Đỏ</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>Tổng tiền: 10.000.000đ</div>
+                <div>Giảm: 400.000đ</div>
+                <div>Mã giảm: THOITRANG2025</div>
+                <div>Thanh toán: 9.600.000đ</div>
+                <div>PTTT: Ví Momo</div>
+                <div>TTTT: Đã thanh toán</div>
+              </td>
+              <td>
+                <div class="badge badge-red">Đã hủy</div>
+              </td>
+              <td class="inner-text-right">
+                <div>16:20</div>
+                <div>01/01/2025</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </main>
-    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
-    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
-    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
-    <script src="assets/dashboard/js/nqh-script.js"> </script>
-  </body>
+    </div>
+  </main>
+  <script
+    src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+  <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+  <script src="assets/dashboard/js/nqh-script.js"> </script>
+</body>
+
 </html>

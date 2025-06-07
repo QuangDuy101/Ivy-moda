@@ -284,19 +284,70 @@
         <div class="box-filter">
           <ul>
             <li>
-              <a href="#">Size <i class="fa-solid fa-plus"></i></a>
+              <a href="#collapseSize" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSize">
+                Size 
+                <i class="fa-solid fa-plus"></i>
+              </a>
+              <div class="collapse" id="collapseSize">
+                <div class="inner-wrap-item">
+                  <div class="inner-item">S</div>
+                  <div class="inner-item">M</div>
+                  <div class="inner-item">L</div>
+                  <div class="inner-item">XL</div>
+                  <div class="inner-item">XXL</div>
+                </div>
+              </div>
             </li>
             <li>
-              <a href="#">Màu sắc <i class="fa-solid fa-plus"></i></a>
+              <a href="#collapseColor" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseColor">
+                Màu sắc 
+                <i class="fa-solid fa-plus"></i>
+              </a>
+              <div class="collapse" id="collapseColor">
+                <div class="inner-wrap-item">
+                  <div class="inner-item-color"></div>
+                  <div class="inner-item-color"></div>
+                  <div class="inner-item-color"></div>
+                  <div class="inner-item-color"></div>
+                  <div class="inner-item-color"></div>
+                </div>
+              </div>
             </li>
             <li>
-              <a href="#">Mức giá <i class="fa-solid fa-plus"></i></a>
+              <a href="#">Mức giá</a>
             </li>
             <li>
-              <a href="#">Mức chiết khấu <i class="fa-solid fa-plus"></i></a>
+              <a href="#collapsePercent" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapsePercent">
+                Mức chiết khấu 
+                <i class="fa-solid fa-plus"></i>
+              </a>
+              <div class="collapse" id="collapsePercent">
+                <div class="inner-wrap-percent">
+                  <div class="inner-item-percent">
+                    <input type="radio" name="percent" id="percent1">
+                    <label for="percent1">Dưới 30%</label>
+                  </div>
+                  <div class="inner-item-percent">
+                    <input type="radio" name="percent" id="percent2">
+                    <label for="percent2">Từ 30% - 50%</label>
+                  </div>
+                  <div class="inner-item-percent">
+                    <input type="radio" name="percent" id="percent3">
+                    <label for="percent3">Từ 50% - 70%</label>
+                  </div>
+                  <div class="inner-item-percent">
+                    <input type="radio" name="percent" id="percent4">
+                    <label for="percent4">Từ 70%</label>
+                  </div>
+                  <div class="inner-item-percent">
+                    <input type="radio" name="percent" id="percent5">
+                    <label for="percent5">Giá đặc biệt</label>
+                  </div>
+                </div>
+              </div>
             </li>
             <li>
-              <a href="#">Nâng cao <i class="fa-solid fa-plus"></i></a>
+              <a href="#">Nâng cao</a>
             </li>
           </ul>
           <div class="inner-actions">
@@ -308,6 +359,7 @@
             </div>
           </div>
         </div>
+        <div class="overlay-filter"></div>
         <!-- End Box filter -->
 
         <div class="list-product">

@@ -61,7 +61,7 @@ img {
   padding: 18px 0;
   background-color: #fff;
   position: sticky;
-  z-index: 9999;
+  z-index: 998;
   top: 0;
   left: 0;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
@@ -1462,6 +1462,73 @@ img {
   color: #fff;
 }
 
+.box-filter .inner-wrap-item {
+  padding-top: 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.box-filter .inner-wrap-item .inner-item {
+  border: 1px solid #E7E8E9;
+  border-radius: 6px 0 6px 0;
+  width: 47px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6C6D70;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.box-filter a.active i::before {
+  content: "\f068";
+}
+
+.box-filter .inner-wrap-item .inner-item-color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #221f20;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.box-filter .inner-wrap-item .inner-item-color:nth-child(2) {
+  background-color: #fff;
+}
+
+.box-filter .inner-wrap-item .inner-item-color:nth-child(3) {
+  background-color: blue;
+}
+
+.box-filter .inner-wrap-item .inner-item-color:nth-child(4) {
+  background-color: yellow;
+}
+
+.box-filter .inner-wrap-item .inner-item-color:nth-child(5) {
+  background-color: pink;
+}
+
+.box-filter .inner-wrap-percent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.box-filter .inner-wrap-percent .inner-item-percent {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.overlay-filter {
+  display: none;
+}
+
 @media (max-width: 991.98px) {
   .box-filter {
     width: 240px;
@@ -1478,8 +1545,29 @@ img {
   .box-filter {
     display: none;
   }
-}
 
+  .box-filter.active {
+    width: 280px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    border-radius: 0;
+  }
+
+  .overlay-filter.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: #00000088;
+  }
+}
 /* End Box filter */
 
 /* Pagination */

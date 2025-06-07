@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/detail.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+  <title>Detail | IVY moda</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="inner-wrap">
+        <!-- Menu Moblie -->
+        <button class="inner-menu-mobile" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile"
+          aria-controls="menu-mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="menu-mobile">
+          <div class="offcanvas-header">
+            <button class="button-close-menu" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="menu-mobile-button">
+              <a href="#">Đăng nhập</a>
+            </div>
+            <nav class="menu-mobile-content">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" href="#sub-menu-mobile1" role="button" aria-expanded="false"
+                    aria-controls="sub-menu-mobile1">
+                    <span>Nữ</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <ul class="collapse" id="sub-menu-mobile1">
+                    <li>
+                      <a href="#">Chân váy</a>
+                    </li>
+                    <li>
+                      <a href="#">Đầm / Áo dài</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a data-bs-toggle="collapse" href="#sub-menu-mobile2" role="button" aria-expanded="false"
+                    aria-controls="sub-menu-mobile2">
+                    <span>Nam</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <ul class="collapse" id="sub-menu-mobile2">
+                    <li>
+                      <a href="#">Áo</a>
+                    </li>
+                    <li>
+                      <a href="#">Quần nam</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="active">
+                    <span>ƯU ĐÃI LỚN THÁNG 3</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Bộ sưu tập</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>LIFESTYLE</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Về chúng tôi</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- End Menu Mobile -->
+
+        <nav class="inner-menu">
+          <ul>
+            <li>
+              <a href="#">Nữ</a>
+            </li>
+            <li>
+              <a href="#">Nam</a>
+            </li>
+            <li>
+              <a href="#" class="active">Ưu đãi lớn tháng 3</a>
+              <ul>
+                <div class="sub-title-menu">
+                  <a href="#">SALE 50% Toàn bộ SP</a>
+                </div>
+                <li>
+                  <a href="#">Áo công sở</a>
+                </li>
+                <li>
+                  <a href="#">Đầm kiểu</a>
+                </li>
+                <li>
+                  <a href="#">Áo khoác / blazer</a>
+                </li>
+                <li>
+                  <a href="#">Áo thun / len</a>
+                </li>
+                <li>
+                  <a href="#">Quần tây / jeans</a>
+                </li>
+                <li>
+                  <a href="#">Chân váy công sở</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Bộ sưu tập</a>
+            </li>
+            <li>
+              <a href="#">Về chúng tôi</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="inner-logo">
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="IVY moda" />
+          </a>
+        </div>
+        <div class="inner-right-header">
+          <form action="">
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" placeholder="TÌM KIẾM SẢN PHẨM" />
+          </form>
+          <div class="inner-actions">
+            <div class="inner-headphone">
+              <a href="#"><i class="fa-solid fa-headphones"></i></a>
+            </div>
+            <div class="inner-user">
+              <a href="login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+            <div class="inner-cart">
+              <!-- Cart Mobile -->
+              <a data-bs-toggle="offcanvas" href="#cart-mobile" role="button" aria-controls="cart-mobile">
+                <i class="bi bi-bag"></i>
+                <span>0</span>
+              </a>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="cart-mobile" aria-labelledby="cart-mobile-title">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="cart-mobile-title">
+                    Giỏ hàng
+                    <div class="cart-mobile-quantity">0</div>
+                  </h5>
+                  <button data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="inner-content">
+                    <div class="cart-mobile-total">Tổng cộng:<b>0đ</b></div>
+                    <a href="#" class="cart-mobile-button">Đăng nhập</a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Cart Mobile -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+  <!--Section-->
+
+  <section>
+    <div class="breadcrums-product">
+      <a href="">Trang chủ </a>
+      <a href="">- Nữ -</a>
+      <a href=""> Blossom Pink Dress - Đầm lụa họa tiết</a>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-detail__gallery">
+          <div class="product-gallery__slide">
+            <div class="product-gallery__slide-big">
+              <!-- <img src="assets/images/detail1.webp" alt=""> -->
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/images/detail1.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/detailsm2.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/detailsm3.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/detailsm4.webp" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            </div>
+            <div class="product-gallery__slide-small">
+              <div class="swiper-wraper">
+                <div class="swiper-slide">
+                  <img src="assets/images/detailsm1.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/detailsm2.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/detailsm3.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/detailsm4.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-detail__information">
+          <h1>Blossom Pink Dress - Đầm lụa họa tiết</h1>
+          <div class="product-detail__sub-infor">
+            <span>SKU:48M9031</span>
+            <div class="product-detail__rating">
+              <div class="product-detail__rating-star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span>(0 đánh giá)</span>
+            </div>
+          </div>
+          <div class="product-detail__price">
+            <b>1.790.000đ</b>
+          </div>
+          <div class="product-detail__color">
+            <p>Màu sắc:Họa tiết Hồng cánh sen</p>
+            <div class="product-detail__color-check">
+              <button class="check-empty"></button>
+              <button class="check"><i class="fa-solid fa-check"></i></button>
+            </div>
+
+
+          </div>
+          <div class="product-detail__size">
+            <div class="product-detail__size-input">
+              <p>S</p>
+              <p>M</p>
+              <p>L</p>
+              <p>XL</p>
+              <p>XXL</p>
+            </div>
+            <p class="check-size"><i class=" fa-solid fa-ruler"></i>Kiểm tra size của bạn</p>
+          </div>
+          <div class="product-detail__quanlity">
+            <h3>Số lượng</h3>
+            <div class="product-detail__num">
+              <div class="product-detail__num-decre"><i class="fa-solid fa-minus"></i></div>
+              <span>1</span>
+              <div class="product-detail__num-incre"><i class="fa-solid fa-plus"></i></div>
+            </div>
+          </div>
+          
+             <div class="product-detail__action">
+            <button class="add">Thêm vào giỏ</button>
+            <button class="buy">Mua hàng</button>
+            <button class="heart"><i class='bx bx-heart'></i></button>
+          </div>
+          
+         
+          <div class="product-detail__find">
+            <a>Tìm tại cửa hàng</a>
+          </div>
+
+        <div class="product-detail__tab">
+          <nav class="tab-navs">
+            <ul>
+              <li><a style="font-size: 17px;" href="#tab1" class="active">Giới Thiệu</a></li>
+              <li><a style="font-size: 17px;" href="#tab2">Chi Tiết Sản Phẩm</a></li>
+              <li><a style="font-size: 17px;" href="#tab3">Bảo Quản</a></li>
+            </ul>
+          </nav>
+          <div class="tab-contents">
+            <div id="tab1" class="tab-content">
+              <div class="content-wrapper">
+                <p>Bliss Dress là sự kết hợp hoàn hảo giữa vẻ đẹp thanh lịch và nữ tính, phù hợp cho nhiều dịp khác nhau
+                  từ đi chơi, dự tiệc đến dạo phố. Đây là một lựa chọn tuyệt vời cho nàng muốn thể hiện nét dịu dàng qua
+                  phong cách thời trang của mình.</p>
+                <h3>Thông tin mẫu:</h3>
+                <h3>Chiều cao: <span>167cm</span></h3>
+                <h3>Cân nặng: <span>50kg</span></h3>
+                <h3>Số đo 3 vòng: <span>83-67-99 cm</span></h3>
+                <p>Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và
+                  màu sắc hiển thị qua màn hình máy tính/ điện thoại.</p>
+              </div>
+              <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div id="tab2" class="tab-content">
+              <div class="content-wrapper">
+                <p>Chiều cao: 165 cm</p>
+                <p>Cân nặng: 49 kg</p>
+                <p>Số đo 3 vòng: 81-63-90 cm</p>
+                <p>Mẫu mặc size S</p>
+                <p>Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và
+                  màu sắc hiển thị qua màn hình máy tính/ điện thoại.</p>
+              </div>
+              <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div id="tab3" class="tab-content">
+              <div class="content-wrapper">
+                <h3>Chi tiết bảo quản:</h3>
+                <p>* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai giãn.</p>
+                <p>* Vải voan, lụa, chiffon nên giặt bằng tay.</p>
+                <p>* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.</p>
+                <p>* Vải thô, tuytsi, kaki có phối màu tương phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.</p>
+                <p>* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì nên lộn trái sản
+                  phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản
+                  phẩm khác.</p>
+              </div>
+              <span class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <!--Section-->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="left-footer">
+          <div class="inner-brand">
+            <img src="./assets/images/logo.png" alt="">
+            <img src="./assets/images/img-congthuong.png" alt="">
+            <img src="./assets/images/dmca.png" alt="">
+          </div>
+          <div class="inner-socials">
+            <ul>
+              <li>
+                <a href="#"><img src="./assets/images/ic_fb.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_gg.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_instagram.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_pinterest.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_ytb.svg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-button">
+            <a href="" class="button-hotline">Hotline: 0246 662 3434</a>
+          </div>
+        </div>
+        <div class="center-footer">
+          <div class="inner-item">
+            <div class="title-footer">Giới thiệu</div>
+            <ul>
+              <li>
+                <a href="#">Về IVY moda</a>
+              </li>
+              <li>
+                <a href="#">Tuyển dụng</a>
+              </li>
+              <li>
+                <a href="#">Hệ thống cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Dịch vụ khách hàng</div>
+            <ul>
+              <li>
+                <a href="#">Chính sách điều khoản</a>
+              </li>
+              <li>
+                <a href="#">Hướng dẫn mua hàng</a>
+              </li>
+              <li>
+                <a href="#">Chính sách thanh toán</a>
+              </li>
+              <li>
+                <a href="#">Chính sách đổi trả</a>
+              </li>
+              <li>
+                <a href="#">Chính sách bảo hành</a>
+              </li>
+              <li>
+                <a href="#">Chính sách giao nhận vận chuyển</a>
+              </li>
+              <li>
+                <a href="#">Chính sách thẻ thành viên</a>
+              </li>
+              <li>
+                <a href="#">Q&A</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Liên hệ</div>
+            <ul>
+              <li>
+                <a href="#">Hotline</a>
+              </li>
+              <li>
+                <a href="#">Email</a>
+              </li>
+              <li>
+                <a href="#">Live Chat</a>
+              </li>
+              <li>
+                <a href="#">Messenger</a>
+              </li>
+              <li>
+                <a href="#">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-footer">
+          <div class="title-form">Nhận thông tin các chương trình của IVY moda</div>
+          <form action="" class="inner-form">
+            <input type="email" placeholder="Nhập địa chỉ email">
+            <button type="submit">Đăng ký</button>
+          </form>
+        </div>
+      </div>
+      <div class="inner-block">
+        <div class="right-footer">
+          <div class="title-form">Nhận thông tin các chương trình của IVY moda</div>
+          <form action="" class="inner-form">
+            <input type="email" placeholder="Nhập địa chỉ email">
+            <button type="submit">Đăng ký</button>
+          </form>
+        </div>
+        <div class="center-footer">
+          <div class="inner-item">
+            <div class="title-footer">Giới thiệu</div>
+            <ul>
+              <li>
+                <a href="#">Về IVY moda</a>
+              </li>
+              <li>
+                <a href="#">Tuyển dụng</a>
+              </li>
+              <li>
+                <a href="#">Hệ thống cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Dịch vụ khách hàng</div>
+            <ul>
+              <li>
+                <a href="#">Chính sách điều khoản</a>
+              </li>
+              <li>
+                <a href="#">Hướng dẫn mua hàng</a>
+              </li>
+              <li>
+                <a href="#">Chính sách thanh toán</a>
+              </li>
+              <li>
+                <a href="#">Chính sách đổi trả</a>
+              </li>
+              <li>
+                <a href="#">Chính sách bảo hành</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Liên hệ</div>
+            <ul>
+              <li>
+                <a href="#">Hotline</a>
+              </li>
+              <li>
+                <a href="#">Email</a>
+              </li>
+              <li>
+                <a href="#">Live Chat</a>
+              </li>
+              <li>
+                <a href="#">Messenger</a>
+              </li>
+              <li>
+                <a href="#">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="left-footer">
+          <div class="inner-brand">
+            <img src="./assets/images/logo.png" alt="">
+            <img src="./assets/images/img-congthuong.png" alt="">
+            <img src="./assets/images/dmca.png" alt="">
+          </div>
+          <div class="inner-socials">
+            <ul>
+              <li>
+                <a href="#"><img src="./assets/images/ic_fb.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_gg.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_instagram.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_pinterest.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_ytb.svg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-button">
+            <a href="" class="button-hotline">Hotline: 0246 662 3434</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="sub-footer">
+    ©IVYmoda All rights reserved
+  </div>
+  <!-- End Footer -->
+
+  <!-- Meta mobile -->
+  <div class="meta-mobile">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="inner-item">
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <span>Tìm kiếm</span>
+        </div>
+        <div class="inner-item">
+          <a href="#"><i class="fa-regular fa-user"></i></a>
+          <span>Đăng nhập</span>
+        </div>
+        <div class="inner-item">
+          <a href="#"><i class="fa-solid fa-headphones"></i></a>
+          <span>Trợ giúp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Meta mobile -->
+
+  <!-- Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- JS -->
+  <script src="./assets/js/swiper.js"></script>
+
+  <script>
+
+    $(() => {
+      // Chuyển đổi tab
+      $(".tab-navs a").click(function (e) {
+        e.preventDefault();
+        $(".tab-navs a").removeClass("active");
+        $(this).addClass("active");
+
+        let currentTab = $(this).attr("href");
+        $(".tab-content").hide(); // Ẩn tất cả tab
+        $(currentTab).show(); // Hiển thị tab được chọn
+
+        // Reset nội dung về trạng thái thu gọn khi chuyển tab
+        $('.content-wrapper').removeClass('expanded'); // Thu gọn tất cả nội dung
+        $('.toggle-icon').removeClass('expanded'); // Reset icon về trỏ xuống
+      });
+
+      // Xử lý toggle nội dung khi nhấp vào icon
+      $('.toggle-icon').click(function () {
+        const contentWrapper = $(this).prev('.content-wrapper'); // Lấy content-wrapper ngay trước icon
+
+        if (contentWrapper.length) {
+          contentWrapper.toggleClass('expanded'); // Toggle trạng thái mở rộng/thu gọn
+          $(this).toggleClass('expanded'); // Xoay icon
+        }
+      });
+    });
+    //----------phóng to ảnh---------
+    const image = document.querySelector('.product-gallery__slide-big img');
+
+    image.addEventListener('mousemove', (e) => {
+      const rect = image.getBoundingClientRect(); // Lấy kích thước và vị trí ảnh
+      const x = e.clientX - rect.left; // Tọa độ x của chuột trong ảnh
+      const y = e.clientY - rect.top;  // Tọa độ y của chuột trong ảnh
+
+      // Tính phần trăm vị trí chuột so với kích thước ảnh
+      const xPercent = (x / rect.width) * 100;
+      const yPercent = (y / rect.height) * 100;
+
+      // Cập nhật transform-origin
+      image.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+    });
+
+    // Khi không hover nữa, reset transform-origin về trung tâm
+    image.addEventListener('mouseleave', () => {
+      image.style.transformOrigin = '50% 50%';
+    });
+
+
+    //-------slide-up-down------------
+    // Xử lý toggle nội dung khi nhấp vào icon
+
+  </script>
+
+
+</body>
+
+</html>

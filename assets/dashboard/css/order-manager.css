@@ -1,0 +1,51 @@
+.filter-sort {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+    .filter-sort > * {
+      margin: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #7d6009;
+      color: white;
+      cursor: pointer;
+    }
+    input[type="text"] {
+      padding: 6px;
+      width: 200px;
+    }
+    select {
+      padding: 6px;
+    }
+
+    .action-buttons button {
+  margin: 2px;
+  padding: 6px 10px;
+  border: none;
+  background-color: #b7cbdb;
+  color: rgb(25, 9, 9);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.action-buttons button.delete {
+  background-color: #f88c85;
+}
+
+.action-buttons i {
+  pointer-events: none;
+}

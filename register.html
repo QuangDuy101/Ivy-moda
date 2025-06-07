@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/register.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Register | IVY moda</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="inner-wrap">
+        <!-- Menu Moblie -->
+        <button class="inner-menu-mobile" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile"
+          aria-controls="menu-mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="menu-mobile">
+          <div class="offcanvas-header">
+            <button class="button-close-menu" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="menu-mobile-button">
+              <a href="#">Đăng nhập</a>
+            </div>
+            <nav class="menu-mobile-content">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" href="#sub-menu-mobile1" role="button" aria-expanded="false"
+                    aria-controls="sub-menu-mobile1">
+                    <span>Nữ</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <ul class="collapse" id="sub-menu-mobile1">
+                    <li>
+                      <a href="#">Chân váy</a>
+                    </li>
+                    <li>
+                      <a href="#">Đầm / Áo dài</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a data-bs-toggle="collapse" href="#sub-menu-mobile2" role="button" aria-expanded="false"
+                  aria-controls="sub-menu-mobile2">
+                    <span>Nam</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <ul class="collapse" id="sub-menu-mobile2">
+                    <li>
+                      <a href="#">Áo</a>
+                    </li>
+                    <li>
+                      <a href="#">Quần nam</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="active">
+                    <span>ƯU ĐÃI LỚN THÁNG 3</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Bộ sưu tập</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>LIFESTYLE</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Về chúng tôi</span>
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- End Menu Mobile -->
+
+        <nav class="inner-menu">
+          <ul>
+            <li>
+              <a href="#">Nữ</a>
+            </li>
+            <li>
+              <a href="#">Nam</a>
+            </li>
+            <li>
+              <a href="#" class="active">Ưu đãi lớn tháng 3</a>
+              <ul>
+                <div class="sub-title-menu">
+                  <a href="#">SALE 50% Toàn bộ SP</a>
+                </div>
+                <li>
+                  <a href="#">Áo công sở</a>
+                </li>
+                <li>
+                  <a href="#">Đầm kiểu</a>
+                </li>
+                <li>
+                  <a href="#">Áo khoác / blazer</a>
+                </li>
+                <li>
+                  <a href="#">Áo thun / len</a>
+                </li>
+                <li>
+                  <a href="#">Quần tây / jeans</a>
+                </li>
+                <li>
+                  <a href="#">Chân váy công sở</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Bộ sưu tập</a>
+            </li>
+            <li>
+              <a href="#">Về chúng tôi</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="inner-logo">
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="IVY moda" />
+          </a>
+        </div>
+        <div class="inner-right-header">
+          <form action="">
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" placeholder="TÌM KIẾM SẢN PHẨM" />
+          </form>
+          <div class="inner-actions">
+            <div class="inner-headphone">
+              <a href="#"><i class="fa-solid fa-headphones"></i></a>
+            </div>
+            <div class="inner-user">
+              <a href="#"><i class="fa-regular fa-user"></i></a>
+            </div>
+            <div class="inner-cart">
+              <!-- Cart Mobile -->
+              <a data-bs-toggle="offcanvas" href="#cart-mobile" role="button" aria-controls="cart-mobile">
+                <i class="bi bi-bag"></i>
+                <span>0</span>
+              </a>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="cart-mobile" aria-labelledby="cart-mobile-title">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="cart-mobile-title">
+                    Giỏ hàng
+                    <div class="cart-mobile-quantity">0</div>
+                  </h5>
+                  <button data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="inner-content">
+                    <div class="cart-mobile-total">Tổng cộng:<b>0đ</b></div>
+                    <a href="#" class="cart-mobile-button">Đăng nhập</a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Cart Mobile -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+  <!--Section-->
+
+  <section>
+    <div class="row center">
+        
+            <div class="auth__register">
+                <h3 class="auth__register-title">Đăng kí tài khoản IVY</h3>
+                <div class="auth__register-content">
+                    <div class="auth-desc">
+                        <span>Nếu bạn chưa có tài khoản, hãy đăng kí để tích lũy điểm thành     </span> 
+                        <span>viên và nhận được những ưu đãi tốt hơn!</span>
+                    </div>
+                    <div class="auth__register-content-form">
+                        <div class="auth__register-content-input">
+                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" placeholder="Mật khẩu">
+                            <input type="text" class="form-control" placeholder="Nhập lại mật khẩu">
+                        </div>
+                        <div class="auth__register-options">
+                            <p class="login-auth">Bạn đã có tài khoản <a style="color: red; text-decoration: underline;">Đăng nhập</a></p>
+                        </div>
+                        <button class="auth__register-btn">ĐĂNG KÍ</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+  </section>
+   <!--Section-->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="left-footer">
+          <div class="inner-brand">
+            <img src="./assets/images/logo.png" alt="">
+            <img src="./assets/images/img-congthuong.png" alt="">
+            <img src="./assets/images/dmca.png" alt="">
+          </div>
+          <div class="inner-socials">
+            <ul>
+              <li>
+                <a href="#"><img src="./assets/images/ic_fb.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_gg.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_instagram.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_pinterest.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_ytb.svg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-button">
+            <a href="" class="button-hotline">Hotline: 0246 662 3434</a>
+          </div>
+        </div>
+        <div class="center-footer">
+          <div class="inner-item">
+            <div class="title-footer">Giới thiệu</div>
+            <ul>
+              <li>
+                <a href="#">Về IVY moda</a>
+              </li>
+              <li>
+                <a href="#">Tuyển dụng</a>
+              </li>
+              <li>
+                <a href="#">Hệ thống cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Dịch vụ khách hàng</div>
+            <ul>
+              <li>
+                <a href="#">Chính sách điều khoản</a>
+              </li>
+              <li>
+                <a href="#">Hướng dẫn mua hàng</a>
+              </li>
+              <li>
+                <a href="#">Chính sách thanh toán</a>
+              </li>
+              <li>
+                <a href="#">Chính sách đổi trả</a>
+              </li>
+              <li>
+                <a href="#">Chính sách bảo hành</a>
+              </li>
+              <li>
+                <a href="#">Chính sách giao nhận vận chuyển</a>
+              </li>
+              <li>
+                <a href="#">Chính sách thẻ thành viên</a>
+              </li>
+              <li>
+                <a href="#">Q&A</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Liên hệ</div>
+            <ul>
+              <li>
+                <a href="#">Hotline</a>
+              </li>
+              <li>
+                <a href="#">Email</a>
+              </li>
+              <li>
+                <a href="#">Live Chat</a>
+              </li>
+              <li>
+                <a href="#">Messenger</a>
+              </li>
+              <li>
+                <a href="#">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-footer">
+          <div class="title-form">Nhận thông tin các chương trình của IVY moda</div>
+          <form action="" class="inner-form">
+            <input type="email" placeholder="Nhập địa chỉ email">
+            <button type="submit">Đăng ký</button>
+          </form>
+        </div>
+      </div>
+      <div class="inner-block">
+        <div class="right-footer">
+          <div class="title-form">Nhận thông tin các chương trình của IVY moda</div>
+          <form action="" class="inner-form">
+            <input type="email" placeholder="Nhập địa chỉ email">
+            <button type="submit">Đăng ký</button>
+          </form>
+        </div>
+        <div class="center-footer">
+          <div class="inner-item">
+            <div class="title-footer">Giới thiệu</div>
+            <ul>
+              <li>
+                <a href="#">Về IVY moda</a>
+              </li>
+              <li>
+                <a href="#">Tuyển dụng</a>
+              </li>
+              <li>
+                <a href="#">Hệ thống cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Dịch vụ khách hàng</div>
+            <ul>
+              <li>
+                <a href="#">Chính sách điều khoản</a>
+              </li>
+              <li>
+                <a href="#">Hướng dẫn mua hàng</a>
+              </li>
+              <li>
+                <a href="#">Chính sách thanh toán</a>
+              </li>
+              <li>
+                <a href="#">Chính sách đổi trả</a>
+              </li>
+              <li>
+                <a href="#">Chính sách bảo hành</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-item">
+            <div class="title-footer">Liên hệ</div>
+            <ul>
+              <li>
+                <a href="#">Hotline</a>
+              </li>
+              <li>
+                <a href="#">Email</a>
+              </li>
+              <li>
+                <a href="#">Live Chat</a>
+              </li>
+              <li>
+                <a href="#">Messenger</a>
+              </li>
+              <li>
+                <a href="#">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="left-footer">
+          <div class="inner-brand">
+            <img src="./assets/images/logo.png" alt="">
+            <img src="./assets/images/img-congthuong.png" alt="">
+            <img src="./assets/images/dmca.png" alt="">
+          </div>
+          <div class="inner-socials">
+            <ul>
+              <li>
+                <a href="#"><img src="./assets/images/ic_fb.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_gg.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_instagram.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_pinterest.svg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/images/ic_ytb.svg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner-button">
+            <a href="" class="button-hotline">Hotline: 0246 662 3434</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="sub-footer">
+    ©IVYmoda All rights reserved
+  </div>
+  <!-- End Footer -->
+
+  <!-- Meta mobile -->
+  <div class="meta-mobile">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="inner-item">
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <span>Tìm kiếm</span>
+        </div>
+        <div class="inner-item">
+          <a href="#"><i class="fa-regular fa-user"></i></a>
+          <span>Đăng nhập</span>
+        </div>
+        <div class="inner-item">
+          <a href="#"><i class="fa-solid fa-headphones"></i></a>
+          <span>Trợ giúp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Meta mobile -->
+
+  <!-- Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- JS -->
+  <script src="./assets/js/swiper.js"></script>
+  <script src="assets/js/register.js"></script>
+</body>
+
+</html>

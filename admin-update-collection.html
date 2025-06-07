@@ -1,0 +1,152 @@
+<!DOCTYPE html >
+<html> 
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css"/>
+    <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="assets/dashboard/js/tinymce-config.js"> </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/dashboard/css/style.css"/>
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <title>Tổng quan</title>
+  </head>
+  <body> 
+    <header class="header"> 
+      <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+      <div class="inner-wrap"> 
+        <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg"/><span>6</span></div>
+        <div class="inner-account"> 
+          <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg"/></div>
+          <div class="inner-text"> 
+            <div class="inner-name">Ngo Quang Ha</div>
+            <div class="inner-role">Admin</div>
+          </div>
+        </div>
+        <button class="inner-menu-mobile">
+           <i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <nav class="sider"> 
+      <ul class="inner-menu"> 
+        <li> <a  href=""><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+        <li><a class="active" href="/admin-collection-list.html"><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
+        <li><a href=""><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+        <li><a href=""><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+        <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+      </ul>
+      <hr/>
+      <ul class="inner-menu"> 
+        <li><a href="setting-list.html"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất  </a></li>
+      </ul>
+    </nav>
+    <div class="sider-overlay"></div>
+    <main id="main" class="main" style="background-color: #dddce1;">
+        <div class="pagetitle">
+          <h1>Chỉnh sửa bộ sưu tập</h1>
+        </div>
+      
+        <div class="card">
+          <div class="card-body">
+            <form id="editCollectionForm">
+              <!-- Hàng 1 -->
+              <div class="row mt-4 mb-4">
+                <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+                  <label for="name" class="form-label" style="width: 150px;">Tên bộ sưu tập</label>
+                  <input type="text" class="form-control" id="productName" value="SUMMER TINT" style="margin-left: 40px;">
+                  <div class="text-danger small position-absolute" style="top: 100%; left: 162px;" id="error-productName"></div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+                  <label for="productCode" class="form-label" style="width: 150px;">Mã bộ sưu tập</label>
+                  <input type="text" class="form-control" id="productCode" value="1" disabled>
+                  <div class="text-danger small position-absolute" style="top: 100%; left: 130px;" id="error-productCode"></div>
+                </div>
+              </div>
+      
+              <!-- Hàng 2 -->
+              <div class="row mb-3">
+                <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+                  <div  class="form-label" style="width: 150px; margin-right:90px">Products</div>
+                  <!-- <input type="text" class="form-control" id="productPrice" value="1,2,3,4" style="margin-left: 40px;"> -->
+                  <!-- <div class="text-danger small position-absolute" style="top: 100%; left: 162px;" id="error-productPrice"></div> -->
+                   <div class="d-flex" id="productList" style="gap: 20px;">
+                    <div class="collectionProduct" style="width: 150px; height: 150px; border-radius: 10px; overflow: hidden; position: relative; cursor: pointer;">
+                        <img style="object-fit: cover; width: 100%; height: 100%;" src="assets/images/collection-summertint-10.webp" alt="">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s;">
+                            <span style="color: white; font-size: 24px;">-</span>
+                        </div>
+                    </div>
+                    <div class="collectionProduct1" style="width: 150px; height: 150px; border-radius: 10px; overflow: hidden; position: relative; cursor: pointer;">
+                        <img style="object-fit: cover; width: 100%; height: 100%;" src="assets/images/collection-summertint-11.webp" alt="">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s;">
+                            <span style="color: white; font-size: 24px;">-</span>
+                        </div>
+                    </div>
+                    <div class="collectionProduct2" style="width: 150px; height: 150px; border-radius: 10px; overflow: hidden; position: relative; cursor: pointer;">
+                        <img style="object-fit: cover; width: 100%; height: 100%;" src="assets/images/collection-summertint-12.webp" alt="">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s;">
+                            <span style="color: white; font-size: 24px;">-</span>
+                        </div>
+                    </div>
+                    <div class="collectionProduct3" style="width: 150px; height: 150px; border-radius: 10px; overflow: hidden; position: relative; cursor: pointer;">
+                        <img style="object-fit: cover; width: 100%; height: 100%;" src="assets/images/collection-summertint-13.webp" alt="">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s;">
+                            <span style="color: white; font-size: 24px;">-</span>
+                        </div>
+                    </div>
+                    <div style="width: 150px; height: 150px; border-radius: 10px; overflow: hidden; cursor:pointer">
+                        <i class="bi bi-plus" style="width: 150px; height: 150px; font-size: 150px; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc; border-radius: 10px; color: #57585A;"></i>
+                    </div>
+                   </div>
+                </div>
+              </div>
+      
+              <!-- Hàng 5 -->
+              <div class="row mb-3">
+                <div class="col-md-6 d-flex align-items-center position-relative mb-3">
+                  <label for="productImage" class="form-label" style="width: 150px;">Ảnh</label>
+                  <input class="form-control" type="file" id="productImage" multiple style="margin-left: 40px;">
+                  <div class="text-danger small position-absolute" style="top: 100%; left: 162px;" id="error-productImage"></div>
+                </div>
+              </div>
+      
+              <!-- Hàng mô tả -->
+              <div class="row mb-3">
+                <label for="about" class="col-md-4 col-lg-3 col-form-label" style="width: 150px;">Mô tả</label>
+                <div class="col-md-8 col-lg-9 position-relative mb-3" style="width: 1059px; ">
+                  <textarea class="tinymce-editor">
+                                          <p>Lấy cảm hứng từ những đóa hoa xuân nở rộ, BST lần này thể hiện tinh thần tôn vinh tính nữ qua loạt thiết kế nhã nhặn dành riêng cho các quý cô công sở hiện đại! Giờ đây, vẻ đẹp của người phụ nữ không chỉ thể hiện qua đường nét uyển chuyển mà còn đến từ cảm giác tự tin, thoải mái khi nàng được khoác lên mình những bộ cánh xinh đẹp nhất. Với gam tím chủ đạo được làm mới với đủ sắc thái từ nhẹ nhàng đến những tông trầm sâu lắng, các thiết kế trong BST Lilas Dream mang phong cách tối giản nhưng vẫn đem đến dấu ấn khó phai nhờ phom dáng chỉn chu và đường may vô cùng tinh xảo.
+                                      </p>
+                  </textarea>
+                  <div class="text-danger small position-absolute" style="top: 100%; left: 130px;" id="error-productDescription"></div>
+                </div>
+                
+              </div>
+      
+              <!-- Nút cập nhật -->
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-success btn-update-product">Cập nhật sản phẩm</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+    <script src="assets/dashboard/js/nqh-script.js"> </script>
+    <script src="assets/dashboard/js/collection.js"> </script>
+  </body>
+</html>

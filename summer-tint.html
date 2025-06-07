@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/summer-tint.css" />
+    <title>Lookbook SUMMER TINT  | IVY moda</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="inner-wrap">
+                <!-- Menu Moblie -->
+                <button class="inner-menu-mobile" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile"
+                    aria-controls="menu-mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="menu-mobile">
+                    <div class="offcanvas-header">
+                        <button class="button-close-menu" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="menu-mobile-button">
+                            <a href="#">Đăng nhập</a>
+                        </div>
+                        <nav class="menu-mobile-content">
+                            <ul>
+                                <li>
+                                    <a data-bs-toggle="collapse" href="#sub-menu-mobile1" role="button"
+                                        aria-expanded="false" aria-controls="sub-menu-mobile1">
+                                        <span>Nữ</span>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                    <ul class="collapse" id="sub-menu-mobile1">
+                                        <li>
+                                            <a href="#">Chân váy</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Đầm / Áo dài</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a data-bs-toggle="collapse" href="#sub-menu-mobile2" role="button"
+                                        aria-expanded="false" aria-controls="sub-menu-mobile2">
+                                        <span>Nam</span>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                    <ul class="collapse" id="sub-menu-mobile2">
+                                        <li>
+                                            <a href="#">Áo</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Quần nam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">
+                                        <span>ƯU ĐÃI LỚN THÁNG 3</span>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Bộ sưu tập</span>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>LIFESTYLE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Về chúng tôi</span>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- End Menu Mobile -->
+
+                <nav class="inner-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Nữ</a>
+                        </li>
+                        <li>
+                            <a href="#">Nam</a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">Ưu đãi lớn tháng 3</a>
+                            <ul>
+                                <div class="sub-title-menu">
+                                    <a href="#">SALE 50% Toàn bộ SP</a>
+                                </div>
+                                <li>
+                                    <a href="#">Áo công sở</a>
+                                </li>
+                                <li>
+                                    <a href="#">Đầm kiểu</a>
+                                </li>
+                                <li>
+                                    <a href="#">Áo khoác / blazer</a>
+                                </li>
+                                <li>
+                                    <a href="#">Áo thun / len</a>
+                                </li>
+                                <li>
+                                    <a href="#">Quần tây / jeans</a>
+                                </li>
+                                <li>
+                                    <a href="#">Chân váy công sở</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Bộ sưu tập</a>
+                        </li>
+                        <li>
+                            <a href="#">Về chúng tôi</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="inner-logo">
+                    <a href="/">
+                        <img src="./assets/images/logo.png" alt="IVY moda" />
+                    </a>
+                </div>
+                <div class="inner-right-header">
+                    <form action="">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input type="text" placeholder="TÌM KIẾM SẢN PHẨM" />
+                    </form>
+                    <div class="inner-actions">
+                        <!-- Collapse Headphone -->
+                        <div class="inner-headphone">
+                            <a data-bs-toggle="collapse" href="#collapseHeadphone" role="button" aria-expanded="false"
+                                aria-controls="collapseHeadphone">
+                                <i class="fa-solid fa-headphones"></i>
+                            </a>
+                            <div class="collapse" id="collapseHeadphone">
+                                <div class="card card-body">
+                                    <div class="inner-head">Trợ giúp</div>
+                                    <nav class="inner-body">
+                                        <ul>
+                                            <li><a href="#"><i class="fa-solid fa-phone-volume"></i> Hotline</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-comment-dots"></i> Live chat</a>
+                                            </li>
+                                            <li><a href="#"><i class="fa-solid fa-repeat"></i> Messenger</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-paw"></i> Tra cứu đơn hàng</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Collapse Headphone -->
+                        <div class="inner-user">
+                            <a href="#"><i class="fa-regular fa-user"></i></a>
+                        </div>
+                        <div class="inner-cart">
+                            <!-- Cart Mobile -->
+                            <a data-bs-toggle="offcanvas" href="#cart-mobile" role="button" aria-controls="cart-mobile">
+                                <i class="bi bi-bag"></i>
+                                <span>0</span>
+                            </a>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="cart-mobile"
+                                aria-labelledby="cart-mobile-title">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="cart-mobile-title">
+                                        Giỏ hàng
+                                        <div class="cart-mobile-quantity">0</div>
+                                    </h5>
+                                    <button data-bs-dismiss="offcanvas" aria-label="Close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div class="inner-content">
+                                        <div class="cart-mobile-total">Tổng cộng:<b>0đ</b></div>
+                                        <a href="#" class="cart-mobile-button">Đăng nhập</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Cart Mobile -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Nav -->
+    <div class="nav container" style="padding:15px">
+        <a href="#">Trang chủ</a> - <span>SUMMER TINT</span>
+    </div>
+    <!-- End nav -->
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <div class="banner">
+                <img src="./assets/images/collection-summertint-1.webp" alt="">
+            </div>
+            <div class="title">
+                <h4>SPRING - SUMMER COLLECTION 2025</h4>
+                <h3>SUMMER TINT</h3>
+                <p>Mở đầu mùa nghỉ lễ rực rỡ, IVY moda ra mắt bộ sưu tập Summer Tint như một bản hòa ca, mang theo sắc
+                    thái tươi mới và thư thái của mùa nghỉ dưỡng.
+                    Lấy cảm hứng từ những khoảnh khắc rực rỡ của mùa hè, BST lựa chọn hai gam màu chủ đạo: vàng và trắng
+                    để khéo léo chuyển tải tinh thần tự do và lạc quan vào từng thiết kế. </p>
+            </div>
+            <div class="row bonus g-3">
+                <div class="col-6 col-md-6 col-12">
+                    <img src="./assets/images/collection-summertint-2.webp" alt="">
+                </div>
+                <div class="col-6 col-md-6 col-12">
+                    <img src="./assets/images/collection-summertint-3.webp" alt="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 col-md-4 col-12 " style="margin-bottom: 30px;">
+                    <div class="collection-item">
+                        <div class="ticket-collection">
+                            NEW
+                        </div>
+                        <div class="thumb-collection">
+                            <img src="./assets/images/collection-summertint-4.webp" alt="" class="thumb">
+                            <img src="./assets/images/collection-summertint-5.webp" alt="" class="thumb-hover">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-light">
+                                <img src="./assets/images/001.png" alt="" class="lazy">
+                            </div>
+                            <div class="inner-favorite"><i class="bi bi-heart"></i></div>
+                        </div>
+
+                        <div class="title-collection">
+                            Ivory Bloom Dress – Đầm midi cổ chữ V phối ren
+                        </div>
+
+                        <div>
+                            <div class="price-collection">
+                                <span class="price-normal">2.190.000đ</span>
+                            </div>
+                            <div class="cart-collection">
+                                <a class="cart-bg" href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-4 col-12 " style="margin-bottom: 30px;">
+                    <div class="collection-item">
+                        <div class="ticket-collection">
+                            NEW
+                        </div>
+                        <div class="thumb-collection">
+                            <img src="./assets/images/collection-summertint-7.webp" alt="" class="thumb">
+                            <img src="./assets/images/collection-summertint-8.webp" alt="" class="thumb-hover">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-light">
+                                <img src="./assets/images/001.png" alt="" class="lazy">
+                            </div>
+                            <div class="inner-favorite"><i class="bi bi-heart"></i></div>
+                        </div>
+
+                        <div class="title-collection">
+                            Solar Bloom Dress - Đầm vai lệch hoa vàng
+                        </div>
+
+                        <div>
+                            <div class="price-collection">
+                                <span class="price-normal">1.590.000đ</span>
+                            </div>
+                            <div class="cart-collection">
+                                <a class="cart-bg" href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-4 col-12 " style="margin-bottom: 30px;">
+                    <div class="collection-item">
+                        <div class="ticket-collection">
+                            NEW
+                        </div>
+                        <div class="thumb-collection">
+                            <img src="./assets/images/collection-summertint-9.webp" alt="" class="thumb">
+                            <img src="./assets/images/collection-summertint-10.webp" alt="" class="thumb-hover">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-light">
+                                <img src="./assets/images/001.png" alt="" class="lazy">
+                            </div>
+                            <div class="inner-favorite"><i class="bi bi-heart"></i></div>
+                        </div>
+
+                        <div class="title-collection">
+                            Moonlit Silk Top – Áo hai dây cổ yếm
+                        </div>
+
+                        <div>
+                            <div class="price-collection">
+                                <span class="price-normal">890.000đ</span>
+                            </div>
+                            <div class="cart-collection">
+                                <a class="cart-bg" href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-4 col-12 " style="margin-bottom: 30px;">
+                    <div class="collection-item">
+                        <div class="ticket-collection">
+                            NEW
+                        </div>
+                        <div class="thumb-collection">
+                            <img src="./assets/images/collection-summertint-11.webp" alt="" class="thumb">
+                            <img src="./assets/images/collection-summertint-12.webp" alt="" class="thumb-hover">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-light">
+                                <img src="./assets/images/001.png" alt="" class="lazy">
+                            </div>
+                            <div class="inner-favorite"><i class="bi bi-heart"></i></div>
+                        </div>
+
+                        <div class="title-collection">
+                            Cloud Drift Pants – Quần dài ống suông lụa
+                        </div>
+
+                        <div>
+                            <div class="price-collection">
+                                <span class="price-normal">1.090.000đ</span>
+                            </div>
+                            <div class="cart-collection">
+                                <a class="cart-bg" href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-4 col-12 " style="margin-bottom: 30px;">
+                    <div class="collection-item">
+                        <div class="ticket-collection">
+                            NEW
+                        </div>
+                        <div class="thumb-collection">
+                            <img src="./assets/images/collection-summertint-13.webp" alt="" class="thumb">
+                            <img src="./assets/images/collection-summertint-14.webp" alt="" class="thumb-hover">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-light">
+                                <img src="./assets/images/001.png" alt="" class="lazy">
+                            </div>
+                            <div class="inner-favorite"><i class="bi bi-heart"></i></div>
+                        </div>
+
+                        <div class="title-collection">
+                            Golden Dune Pants – Quần suông lưng cao
+                        </div>
+
+                        <div>
+                            <div class="price-collection">
+                                <span class="price-normal">1.690.000đ</span>
+                            </div>
+                            <div class="cart-collection">
+                                <a class="cart-bg" href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-4 col-12 " style="margin-bottom: 30px;">
+                    <div class="collection-item">
+                        <div class="ticket-collection">
+                            NEW
+                        </div>
+                        <div class="thumb-collection">
+                            <img src="./assets/images/collection-summertint-15.webp" alt="" class="thumb">
+                            <img src="./assets/images/collection-summertint-16.webp" alt="" class="thumb-hover">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-light">
+                                <img src="./assets/images/001.png" alt="" class="lazy">
+                            </div>
+                            <div class="inner-favorite"><i class="bi bi-heart"></i></div>
+                        </div>
+
+                        <div class="title-collection">
+                            Whisper White Lace – Đầm ren midi tay bồng
+                        </div>
+
+                        <div>
+                            <div class="price-collection">
+                                <span class="price-normal">1.790.000đ</span>
+                            </div>
+                            <div class="cart-collection">
+                                <a class="cart-bg" href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-4 col-12 " style="margin-bottom: 30px;">
+                    <div class="collection-item">
+                        <div class="ticket-collection">
+                            NEW
+                        </div>
+                        <div class="thumb-collection">
+                            <img src="./assets/images/collection-summertint-17.webp" alt="" class="thumb">
+                            <img src="./assets/images/collection-summertint-18.webp" alt="" class="thumb-hover">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="bg-light">
+                                <img src="./assets/images/001.png" alt="" class="lazy">
+                            </div>
+                            <div class="inner-favorite"><i class="bi bi-heart"></i></div>
+                        </div>
+
+                        <div class="title-collection">
+                            Serene Flow Skirt – Chân váy ren hoạ tiết lá
+                        </div>
+
+                        <div>
+                            <div class="price-collection">
+                                <span class="price-normal">1.090.000đ</span>
+                            </div>
+                            <div class="cart-collection">
+                                <a class="cart-bg" href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner">
+                <img src="./assets/images/collection-summertint-6.webp" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="inner-top">
+                <div class="title-form">Đăng ký ngay để Nhận thông tin các chương trình của IVY moda</div>
+                <form action="" class="inner-form">
+                    <input type="email" placeholder="Nhập địa chỉ email">
+                    <button type="submit">Đăng ký ngay</button>
+                </form>
+            </div>
+            <div class="inner-middle">
+                <nav class="inner-links">
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Thời trang nam</a></li>
+                        <li><a href="#">Thời trang nữ</a></li>
+                        <li><a href="#">Bộ sưu tập</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                    </ul>
+                </nav>
+                <nav class="inner-socials">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="inner-bottom">
+                <div class="inner-copyright">©IVYmoda All rights reserved</div>
+                <div class="inner-logo">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
+                <nav class="inner-links">
+                    <ul>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Meta mobile -->
+    <div class="meta-mobile">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-item">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <span>Tìm kiếm</span>
+                </div>
+                <div class="inner-item">
+                    <a href="#"><i class="fa-regular fa-user"></i></a>
+                    <span>Đăng nhập</span>
+                </div>
+                <div class="inner-item">
+                    <a href="#"><i class="fa-solid fa-headphones"></i></a>
+                    <span>Trợ giúp</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Meta mobile -->
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="./assets/js/swiper.js"></script>
+
+    <!-- Jquery -->
+    <script src="./assets/js/jquery.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" />
+    <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css" />
+    <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script src="assets/dashboard/js/tinymce-config.js"> </script>
+    <link rel="stylesheet" href="/assets/DashBoard/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Quản lý người dùng trang 3</title>
+    <style>
+        .password-dots {
+            letter-spacing: 2px;
+        }
+
+        .table th {
+            white-space: nowrap;
+        }
+
+        .pagination {
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .password-dots {
+            letter-spacing: 2px;
+        }
+
+        .table {
+            width: 100%;
+            margin: 0;
+        }
+
+        .table th,
+        .table td {
+            padding: 12px 15px;
+            white-space: nowrap;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            position: sticky;
+            top: 0;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .pagination {
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .section-2 {
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            text-align: center;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        .modal-header {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+
+        .modal-body {
+            padding: 10px 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .modal-footer {
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            margin-top: 15px;
+            text-align: right;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .delete-confirm-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .user-info-delete {
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        tr,
+        td {
+            border: 0.5px solid rgb(179, 178, 178);
+            font-size: 12px;
+
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .page {
+            margin-left: 30%;
+            margin-top: 10px;
+        }
+
+        .page button:hover {
+            cursor: pointer;
+            background-color: rgb(27, 27, 27);
+        }
+
+        .search-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #138496;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .action-buttons button {
+            padding: 8px 15px;
+        }
+        .btn-add{
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+        <div class="inner-wrap">
+            <div class="inner-notify"> <img src="/assets/dashboard/images/icon-bell.svg" /><span>6</span></div>
+            <div class="inner-account">
+                <div class="inner-avatar"> <img src="/assets/dashboard/images/admin.jpg" /></div>
+                <div class="inner-text">
+                    <div class="inner-name">Nguyen Hai Bien</div>
+                    <div class="inner-role">Admin</div>
+                </div>
+            </div>
+            <button class="inner-menu-mobile">
+                <i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+    <nav class="sider">
+        <ul class="inner-menu">
+            <li> <a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+            <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
+            <li><a href=""><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+            <li><a href=""><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+            <li><a class="active" href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+        </ul>
+        <hr />
+        <ul class="inner-menu">
+            <li><a href="setting-list.html"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+            <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất </a></li>
+        </ul>
+    </nav>
+    <div class="sider-overlay"></div>
+    <main class="main">
+        <h1 class="box-title">Quản lý người dùng</h1>
+        <div class="section-2">
+            <div class="inner-head">
+                <h2 class="inner-title">Danh sách người dùng</h2>
+            </div>
+
+            <!-- Thêm phần tìm kiếm và nút thêm mới -->
+            <div class="action-buttons">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm theo tên, email hoặc số điện thoại...">
+                    <button id="search-btn"><i class="fas fa-search"></i> Tìm kiếm</button>
+                </div>
+                <button class="btn-add btn btn-success" id="add-user-btn"><i class="fas fa-plus"></i> Thêm mới</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="align-middle ">
+                        <tr>
+                            <th width="50">STT</th>
+                            <th width="70">ID</th>
+                            <th>Họ và tên</th>
+                            <th>Email</th>
+                            <th>Địa chỉ</th>
+                            <th>Số điện thoại</th>
+                            <th>Ngày sinh</th>
+                            <th>Giới tính</th>
+                            <th width="100">Chức năng</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle" id="user-table-body">
+                        <!-- Hàng 1 -->
+                        <tr>
+                            <td>21</td>
+                            <td>21</td>
+                            <td>Nguyễn Văn Bảo</td>
+                            <td>bao@gmail.com</td>
+                            <td>Ba Đình, Hà Nội</td>
+                            <td>09420325235</td>
+                            <td>1/1/2000</td>
+                            <td>Nam</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="1"
+                                    data-name="Nguyễn Văn A">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="1">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="1">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Hàng 2 -->
+                        <tr>
+                            <td>22</td>
+                            <td>22</td>
+                            <td>Trần Thị Xuân</td>
+                            <td>xuan@gmail.com</td>
+                            <td>Hồng Bàng, Hải Phòng</td>
+                            <td>0987654321</td>
+                            <td>15/5/1995</td>
+                            <td>Nữ</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="2"
+                                    data-name="Trần Thị B">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="2">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="2">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>23</td>
+                            <td>23</td>
+                            <td>Nguyễn Minh Anh</td>
+                            <td>minhanh@gmail.com</td>
+                            <td>Ba Đình, Hà Nội</td>
+                            <td>0987654322</td>
+                            <td>12/03/1993</td>
+                            <td>Nam</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="3"
+                                    data-name="Nguyễn Minh Anh">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="3">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="3">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>24</td>
+                            <td>Trần Thị Hương</td>
+                            <td>huongtran@gmail.com</td>
+                            <td>Tiên Lãng, Hải Phòng</td>
+                            <td>0987654323</td>
+                            <td>25/08/1990</td>
+                            <td>Nữ</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="4"
+                                    data-name="Trần Thị Hương">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="4">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="4">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>25</td>
+                            <td>Lê Văn Tùng</td>
+                            <td>tungle@gmail.com</td>
+                            <td>Kiến Xương, Thái Bình</td>
+                            <td>0987654324</td>
+                            <td>15/11/1988</td>
+                            <td>Nam</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="5"
+                                    data-name="Lê Văn Tùng">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="5">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="5">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>26</td>
+                            <td>Phạm Thị Mai</td>
+                            <td>maipham@gmail.com</td>
+                            <td>Vĩnh Thạnh, Bình Định</td>
+                            <td>0987654325</td>
+                            <td>03/05/1995</td>
+                            <td>Nữ</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="6"
+                                    data-name="Phạm Thị Mai">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="6">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="6">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>27</td>
+                            <td>Hoàng Đức Anh</td>
+                            <td>ducanh@gmail.com</td>
+                            <td>Ba Đình, Hà Nội</td>
+                            <td>0987654326</td>
+                            <td>22/09/1991</td>
+                            <td>Nam</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="7"
+                                    data-name="Hoàng Đức Anh">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="7">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="7">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>28</td>
+                            <td>Vũ Thị Lan</td>
+                            <td>lanvu@gmail.com</td>
+                            <td>Yên Dũng, Bắc Giang</td>
+                            <td>0987654327</td>
+                            <td>30/12/1989</td>
+                            <td>Nữ</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="8"
+                                    data-name="Vũ Thị Lan">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="8">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="8">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>Đặng Văn Hải</td>
+                            <td>haidang@gmail.com</td>
+                            <td>Hưng Hà, Thái Bình</td>
+                            <td>0987654328</td>
+                            <td>17/07/1994</td>
+                            <td>Nam</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="9"
+                                    data-name="Đặng Văn Hải">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="9">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="9">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>Ngô Thị Hồng</td>
+                            <td>hongngo@gmail.com</td>
+                            <td>Đông Hưng, Thái Bình</td>
+                            <td>0987654329</td>
+                            <td>08/04/1992</td>
+                            <td>Nữ</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="10"
+                                    data-name="Ngô Thị Hồng">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="10">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="10">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- Phân trang -->
+                <div class="page d-flex justify-content-center align-items-center vh-100 gap-5 mt-5">
+                    <a href="quanLyNguoiDung2.html"><button class="btn btn-secondary">
+                            <<< </button></a>
+                    <a href="quanLyNguoiDung.html"><button class="btn btn-secondary">Trang 1</button></a>
+                    <a href="quanLyNguoiDung2.html"><button class="btn btn-secondary">Trang 2</button></a>
+                    <a href="#"><button class="btn btn-secondary">Trang 3</button></a>
+                    <a href="#"><button class="btn btn-secondary"> >>> </button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Chi tiết người dùng -->
+        <div id="detailModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Thông tin chi tiết người dùng</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>ID:</label>
+                        <p id="detail-id" class="form-control-static"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Họ và tên:</label>
+                        <p id="detail-name" class="form-control-static"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <p id="detail-email" class="form-control-static"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Địa chỉ:</label>
+                        <p id="detail-address" class="form-control-static"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Số điện thoại:</label>
+                        <p id="detail-phone" class="form-control-static"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày sinh:</label>
+                        <p id="detail-dob" class="form-control-static"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Giới tính:</label>
+                        <p id="detail-gender" class="form-control-static"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary close-btn">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Chỉnh sửa người dùng -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Chỉnh sửa thông tin người dùng</h2>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="edit-id">
+                    <div class="form-group">
+                        <label for="edit-name">Họ và tên:</label>
+                        <input type="text" id="edit-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-email">Email:</label>
+                        <input type="email" id="edit-email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-address">Địa chỉ:</label>
+                        <input type="text" id="edit-address" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-phone">Số điện thoại:</label>
+                        <input type="tel" id="edit-phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-dob">Ngày sinh:</label>
+                        <input type="date" id="edit-dob" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Giới tính:</label>
+                        <div>
+                            <label><input type="radio" name="edit-gender" value="Nam" checked> Nam</label>
+                            <label><input type="radio" name="edit-gender" value="Nữ"> Nữ</label>
+                            <label><input type="radio" name="edit-gender" value="Khác"> Khác</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary close-btn">Hủy</button>
+                    <button class="btn btn-primary save-btn">Lưu thay đổi</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Thêm mới người dùng -->
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Thêm mới người dùng</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="add-name">Họ và tên:</label>
+                        <input type="text" id="add-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-email">Email:</label>
+                        <input type="email" id="add-email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-password">Mật khẩu:</label>
+                        <input type="password" id="add-password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-address">Địa chỉ:</label>
+                        <input type="text" id="add-address" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-phone">Số điện thoại:</label>
+                        <input type="tel" id="add-phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-dob">Ngày sinh:</label>
+                        <input type="date" id="add-dob" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Giới tính:</label>
+                        <div>
+                            <label><input type="radio" name="add-gender" value="Nam" checked> Nam</label>
+                            <label><input type="radio" name="add-gender" value="Nữ"> Nữ</label>
+                            <label><input type="radio" name="add-gender" value="Khác"> Khác</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary close-btn">Hủy</button>
+                    <button class="btn btn-success save-add-btn">Thêm mới</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Xác nhận xóa -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content" style="width: 40%;">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Xác nhận xóa người dùng</h2>
+                </div>
+                <div class="modal-body">
+                    <p class="delete-confirm-text">Bạn có chắc chắn muốn xóa người dùng <span class="user-info-delete"
+                            id="delete-user-name"></span> (ID: <span class="user-info-delete"
+                            id="delete-user-id"></span>)?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary close-btn">Hủy</button>
+                    <button class="btn btn-danger confirm-delete-btn">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script
+        src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+    <script src="/assets/dashboard/js/nqh-script.js"> </script>
+
+    <script>
+        // Lấy các modal
+        const detailModal = document.getElementById('detailModal');
+        const editModal = document.getElementById('editModal');
+        const deleteModal = document.getElementById('deleteModal');
+        const addModal = document.getElementById('addModal');
+
+        // Lấy các nút đóng modal
+        const closeButtons = document.querySelectorAll('.close, .close-btn');
+
+        // Biến lưu trữ thông tin người dùng cần xóa
+        let userToDelete = null;
+
+        // Biến lưu trữ danh sách người dùng
+        let users = [];
+
+        // Khởi tạo danh sách người dùng từ bảng
+        function initializeUsers() {
+            const rows = document.querySelectorAll('#user-table-body tr');
+            users = [];
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                users.push({
+                    id: cells[1].textContent,
+                    name: cells[2].textContent,
+                    email: cells[3].textContent,
+                    password: cells[4].textContent,
+                    phone: cells[5].textContent,
+                    dob: cells[6].textContent,
+                    gender: cells[7].textContent
+                });
+            });
+        }
+
+        // Gọi hàm khởi tạo khi trang được tải
+        initializeUsers();
+
+        // Khi người dùng nhấn vào nút xem chi tiết
+        document.querySelectorAll('.detail-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const row = this.closest('tr');
+                const cells = row.querySelectorAll('td');
+
+                // Điền thông tin vào modal chi tiết
+                document.getElementById('detail-id').textContent = cells[1].textContent;
+                document.getElementById('detail-name').textContent = cells[2].textContent;
+                document.getElementById('detail-email').textContent = cells[3].textContent;
+                document.getElementById('detail-address').textContent = cells[4].textContent;
+                document.getElementById('detail-phone').textContent = cells[5].textContent;
+                document.getElementById('detail-dob').textContent = cells[6].textContent;
+                document.getElementById('detail-gender').textContent = cells[7].textContent;
+
+                // Hiển thị modal chi tiết
+                detailModal.style.display = 'block';
+            });
+        });
+
+        // Khi người dùng nhấn vào nút chỉnh sửa
+        document.querySelectorAll('.edit-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const row = this.closest('tr');
+                const cells = row.querySelectorAll('td');
+
+                // Điền thông tin vào modal chỉnh sửa
+                document.getElementById('edit-id').value = cells[1].textContent;
+                document.getElementById('edit-name').value = cells[2].textContent;
+                document.getElementById('edit-email').value = cells[3].textContent;
+                document.getElementById('edit-address').value = cells[4].textContent;
+                document.getElementById('edit-phone').value = cells[5].textContent;
+
+                // Chuyển đổi định dạng ngày từ dd/mm/yyyy sang yyyy-mm-dd
+                const dobParts = cells[6].textContent.split('/');
+                const formattedDob = `${dobParts[2]}-${dobParts[1].padStart(2, '0')}-${dobParts[0].padStart(2, '0')}`;
+                document.getElementById('edit-dob').value = formattedDob;
+
+                // Thiết lập giới tính
+                const gender = cells[7].textContent;
+                document.querySelector(`input[name="edit-gender"][value="${gender}"]`).checked = true;
+
+                // Hiển thị modal chỉnh sửa
+                editModal.style.display = 'block';
+            });
+        });
+
+        // Khi người dùng nhấn vào nút xóa
+        document.querySelectorAll('.delete-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const userId = this.getAttribute('data-id');
+                const userName = this.getAttribute('data-name');
+
+                // Lưu thông tin người dùng cần xóa
+                userToDelete = {
+                    id: userId,
+                    name: userName,
+                    row: this.closest('tr')
+                };
+
+                // Hiển thị thông tin trong modal xác nhận
+                document.getElementById('delete-user-id').textContent = userId;
+                document.getElementById('delete-user-name').textContent = userName;
+
+                // Hiển thị modal xác nhận xóa
+                deleteModal.style.display = 'block';
+            });
+        });
+
+        // Khi người dùng nhấn vào nút thêm mới
+        document.getElementById('add-user-btn').addEventListener('click', function () {
+            // Reset form
+            document.getElementById('add-name').value = '';
+            document.getElementById('add-email').value = '';
+            document.getElementById('add-password').value = '';
+            document.getElementById('add-password').value = '';
+            document.getElementById('add-phone').value = '';
+            document.getElementById('add-dob').value = '';
+            document.querySelector('input[name="add-gender"][value="Nam"]').checked = true;
+
+            // Hiển thị modal thêm mới
+            addModal.style.display = 'block';
+        });
+
+        // Khi người dùng nhấn vào nút tìm kiếm
+        document.getElementById('search-btn').addEventListener('click', function () {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+
+            if (!searchTerm) {
+                // Nếu không có từ khóa tìm kiếm, hiển thị tất cả
+                const rows = document.querySelectorAll('#user-table-body tr');
+                rows.forEach(row => {
+                    row.style.display = '';
+                });
+                return;
+            }
+
+            // Lọc và hiển thị kết quả
+            const rows = document.querySelectorAll('#user-table-body tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const name = cells[2].textContent.toLowerCase();
+                const email = cells[3].textContent.toLowerCase();
+                const phone = cells[5].textContent.toLowerCase();
+
+                if (name.includes(searchTerm)) {
+                    row.style.display = '';
+                } else if (email.includes(searchTerm)) {
+                    row.style.display = '';
+                } else if (phone.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Cho phép tìm kiếm khi nhấn Enter
+        document.getElementById('search-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.getElementById('search-btn').click();
+            }
+        });
+
+        /// Khi người dùng nhấn vào nút đóng hoặc nút hủy
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                detailModal.style.display = 'none';
+                editModal.style.display = 'none';
+                deleteModal.style.display = 'none';
+            });
+        });
+
+        // Khi người dùng nhấn vào nút lưu trong modal chỉnh sửa
+        document.querySelector('.save-btn').addEventListener('click', function () {
+            // Lấy dữ liệu từ form
+            const id = document.getElementById('edit-id').value;
+            const name = document.getElementById('edit-name').value;
+            const email = document.getElementById('edit-email').value;
+            const address = document.getElementById('edit-address').value;
+            const phone = document.getElementById('edit-phone').value;
+            const dob = document.getElementById('edit-dob').value;
+            const gender = document.querySelector('input[name="edit-gender"]:checked').value;
+
+            // Đóng modal
+            editModal.style.display = 'none';
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells[1].textContent === id) {
+                    cells[2].textContent = name;
+                    cells[3].textContent = email;
+                    cells[4].textContent = address;
+                    cells[5].textContent = phone;
+
+                    // Chuyển đổi ngày trở lại định dạng dd/mm/yyyy
+                    const dobParts = dob.split('-');
+                    cells[6].textContent = `${dobParts[2]}/${dobParts[1]}/${dobParts[0]}`;
+
+                    cells[7].textContent = gender;
+                }
+            });
+        });
+
+        // Khi người dùng xác nhận xóa
+        document.querySelector('.confirm-delete-btn').addEventListener('click', function () {
+            if (userToDelete) {
+                userToDelete.row.remove();
+                // Đóng modal
+                deleteModal.style.display = 'none';
+                // Reset biến
+                userToDelete = null;
+                // Cập nhật lại STT các hàng
+                const rows = document.querySelectorAll('tbody tr');
+                rows.forEach((row, index) => {
+                    row.cells[0].textContent = index + 1;
+                });
+            }
+        });
+
+        // Khi người dùng nhấn bất kỳ đâu bên ngoài modal, đóng modal
+        window.addEventListener('click', function (event) {
+            if (event.target === detailModal) {
+                detailModal.style.display = 'none';
+            }
+            if (event.target === editModal) {
+                editModal.style.display = 'none';
+            }
+            if (event.target === deleteModal) {
+                deleteModal.style.display = 'none';
+            }
+        });
+
+
+
+        // Khi người dùng nhấn vào nút "Thêm mới" trong modal thêm mới
+        document.querySelector('.save-add-btn').addEventListener('click', function () {
+            // Lấy dữ liệu từ form
+            const name = document.getElementById('add-name').value;
+            const email = document.getElementById('add-email').value;
+            const password = document.getElementById('add-password').value;
+            const address = document.getElementById('add-address').value;
+            const phone = document.getElementById('add-phone').value;
+            const dob = document.getElementById('add-dob').value;
+            const gender = document.querySelector('input[name="add-gender"]:checked').value;
+
+            // Kiểm tra các trường bắt buộc
+            if (!name || !email || !password || !address || !phone || !dob) {
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
+                return;
+            }
+
+            // Tạo ID mới (lấy ID cuối cùng + 1)
+            const rows = document.querySelectorAll('#user-table-body tr');
+            let newId = 1;
+            if (rows.length > 0) {
+                const lastId = parseInt(rows[rows.length - 1].querySelector('td:nth-child(2)').textContent);
+                newId = lastId + 1;
+            }
+
+            // Chuyển đổi ngày từ yyyy-mm-dd sang dd/mm/yyyy
+            const dobParts = dob.split('-');
+            const formattedDob = `${dobParts[2]}/${dobParts[1]}/${dobParts[0]}`;
+
+            // Tạo hàng mới trong bảng
+            const tbody = document.getElementById('user-table-body');
+            const newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+        <td>${tbody.children.length + 1}</td>
+        <td>${newId}</td>
+        <td>${name}</td>
+        <td>${email}</td>
+        <td>${address}</td>
+        <td>${phone}</td>
+        <td>${formattedDob}</td>
+        <td>${gender}</td>
+        <td>
+            <button class="btn btn-danger btn-sm action-btn delete-btn" data-id="${newId}" data-name="${name}">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+            <button class="btn btn-warning btn-sm action-btn edit-btn" data-id="${newId}">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button class="btn btn-primary btn-sm action-btn detail-btn" data-id="${newId}">
+                <i class="fa-solid fa-circle-info"></i>
+            </button>
+        </td>
+    `;
+
+            // Thêm hàng mới vào bảng
+            tbody.appendChild(newRow);
+
+            // Thêm sự kiện cho các nút mới
+            addRowEventListeners(newRow);
+
+            // Đóng modal
+            addModal.style.display = 'none';
+
+            // Reset form
+            document.getElementById('add-name').value = '';
+            document.getElementById('add-email').value = '';
+            document.getElementById('add-password').value = '';
+            document.getElementById('add-address').value = '';
+            document.getElementById('add-phone').value = '';
+            document.getElementById('add-dob').value = '';
+            document.querySelector('input[name="add-gender"][value="Nam"]').checked = true;
+
+            // Hiển thị thông báo thành công
+            alert('Thêm người dùng mới thành công!');
+        });
+
+        // Hàm thêm sự kiện cho các nút trong hàng mới
+        function addRowEventListeners(row) {
+            // Nút xem chi tiết
+            row.querySelector('.detail-btn').addEventListener('click', function () {
+                const cells = row.querySelectorAll('td');
+
+                document.getElementById('detail-id').textContent = cells[1].textContent;
+                document.getElementById('detail-name').textContent = cells[2].textContent;
+                document.getElementById('detail-email').textContent = cells[3].textContent;
+                document.getElementById('detail-address').textContent = cells[4].textContent;
+                document.getElementById('detail-phone').textContent = cells[5].textContent;
+                document.getElementById('detail-dob').textContent = cells[6].textContent;
+                document.getElementById('detail-gender').textContent = cells[7].textContent;
+
+                detailModal.style.display = 'block';
+            });
+
+            // Nút chỉnh sửa
+            row.querySelector('.edit-btn').addEventListener('click', function () {
+                const cells = row.querySelectorAll('td');
+
+                document.getElementById('edit-id').value = cells[1].textContent;
+                document.getElementById('edit-name').value = cells[2].textContent;
+                document.getElementById('edit-email').value = cells[3].textContent;
+                document.getElementById('edit-address').value = cells[4].textContent;
+                document.getElementById('edit-phone').value = cells[5].textContent;
+
+                const dobParts = cells[6].textContent.split('/');
+                const formattedDob = `${dobParts[2]}-${dobParts[1].padStart(2, '0')}-${dobParts[0].padStart(2, '0')}`;
+                document.getElementById('edit-dob').value = formattedDob;
+
+                const gender = cells[7].textContent;
+                document.querySelector(`input[name="edit-gender"][value="${gender}"]`).checked = true;
+
+                editModal.style.display = 'block';
+            });
+
+            // Nút xóa
+            row.querySelector('.delete-btn').addEventListener('click', function () {
+                const userId = this.getAttribute('data-id');
+                const userName = this.getAttribute('data-name');
+
+                userToDelete = {
+                    id: userId,
+                    name: userName,
+                    row: row
+                };
+
+                document.getElementById('delete-user-id').textContent = userId;
+                document.getElementById('delete-user-name').textContent = userName;
+                deleteModal.style.display = 'block';
+            });
+        }
+
+        // Thêm sự kiện cho dấu x đóng modal thêm mới
+        document.querySelector('#addModal .close').addEventListener('click', function () {
+            addModal.style.display = 'none';
+            resetAddForm();
+        });
+
+        // Thêm sự kiện cho nút Hủy/Đóng trong modal thêm mới
+        document.querySelector('#addModal .close-btn').addEventListener('click', function () {
+            addModal.style.display = 'none';
+            resetAddForm();
+        });
+
+        // Hàm reset form thêm mới
+        function resetAddForm() {
+            document.getElementById('add-name').value = '';
+            document.getElementById('add-email').value = '';
+            document.getElementById('add-password').value = '';
+            document.getElementById('add-address').value = '';
+            document.getElementById('add-phone').value = '';
+            document.getElementById('add-dob').value = '';
+            document.querySelector('input[name="add-gender"][value="Nam"]').checked = true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+/* Header */
+.header {
+  padding: 18px 0;
+  background-color: #fff;
+  position: sticky;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.header .inner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .inner-menu>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header .inner-menu>ul>li>a {
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header .inner-menu>ul>li>a:hover {
+  color: #ac2f33;
+}
+
+.header .inner-menu>ul>li>a.active {
+  color: #ff0000;
+}
+
+.header .inner-menu>ul>li {
+  position: relative;
+}
+
+.header .inner-menu>ul>li>ul {
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  margin: 0;
+  padding: 14px 10px;
+  list-style: none;
+  border: 1px solid #e7e8e9;
+  border-radius: 4px;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.header .inner-menu>ul>li:hover>ul {
+  opacity: 1;
+  visibility: visible;
+  animation: fade_in_show 0.5s;
+  animation-duration: 0.5s;
+}
+
+.header .inner-menu>ul>li>ul a {
+  font-size: 14px;
+  color: #57585a;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.header .inner-menu>ul>li>ul a:hover {
+  opacity: 0.8;
+}
+
+.header .inner-menu>ul>li>ul li:last-child a {
+  margin-bottom: 0;
+}
+
+.header .inner-menu>ul>li>ul .sub-title-menu a {
+  color: #ff0000;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header .inner-logo img {
+  width: 140px;
+  height: auto;
+}
+
+.header .inner-right-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .inner-right-header form {
+  border: 1px solid #e7e8e9;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.header .inner-right-header form button {
+  border: none;
+  background-color: #fff;
+  padding: 0 4px;
+}
+
+.header .inner-right-header form input {
+  border: none;
+  outline: none;
+}
+
+.header .inner-right-header form input::placeholder {
+  font-size: 12px;
+  color: #a1a3a1;
+}
+
+.header .inner-actions {
+  display: inline-flex;
+  gap: 16px;
+  margin-right: 20px;
+}
+
+.header .inner-actions a {
+  color: var(--color-text);
+}
+
+.header .inner-actions .inner-cart {
+  position: relative;
+}
+
+.header .inner-actions .inner-cart span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: var(--color-text);
+  color: #fff;
+  position: absolute;
+  right: -20px;
+  top: -4px;
+}
+
+.header .inner-menu-mobile {
+  border: none;
+  background-color: #fff;
+  padding: 0;
+  display: none;
+}
+
+.header .inner-menu-mobile i {
+  font-size: 24px;
+  color: #6C6D70;
+}

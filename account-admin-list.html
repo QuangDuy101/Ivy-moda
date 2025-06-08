@@ -1,169 +1,180 @@
-<!DOCTYPE html >
-<html> 
-  <head> 
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css"/>
-    <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-    <script src="assets/dashboard/js/tinymce-config.js"> </script>
-    <link rel="stylesheet" href="assets/dashboard/css/style.css"/>
-    <title>Tài khoản quản trị</title>
-  </head>
-  <body> 
-    <header class="header"> 
-      <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
-      <div class="inner-wrap"> 
-        <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg"/><span>6</span></div>
-        <div class="inner-account"> 
-          <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg"/></div>
-          <div class="inner-text"> 
-            <div class="inner-name">Ngo Quang Ha</div>
-            <div class="inner-role">Admin</div>
-          </div>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" />
+  <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css" />
+  <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="assets/dashboard/js/tinymce-config.js"> </script>
+  <link rel="stylesheet" href="assets/dashboard/css/style.css" />
+  <title>Tài khoản quản trị</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+    <div class="inner-wrap">
+      <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg" /><span>6</span></div>
+      <div class="inner-account">
+        <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg" /></div>
+        <div class="inner-text">
+          <div class="inner-name">Ngo Quang Ha</div>
+          <div class="inner-role">Admin</div>
         </div>
-        <button class="inner-menu-mobile">
-           <i class="fa-solid fa-bars"></i></button>
       </div>
-    </header>
-    <nav class="sider"> 
-      <ul class="inner-menu"> 
-        <li> <a class="" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
-        <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
-        <li><a href=""><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
-        <li><a href=""><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
-        <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
-      </ul>
-      <hr/>
-      <ul class="inner-menu"> 
-        <li><a href="setting-list.html" class="active"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
-        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất  </a></li>
-      </ul>
-    </nav>
-    <div class="sider-overlay"></div>
-    <main class="main">
-      <h1 class="box-title">Tài khoản quản trị</h1>
-      <div class="section-4"> 
-        <div class="inner-item inner-label">
-           <i class="fa-solid fa-filter"></i> Bộ lọc</div>
-        <div class="inner-item"> 
-          <select name=""> 
-            <option value="">Trạng thái </option>
-            <option value="">Hoạt động</option>
+      <button class="inner-menu-mobile">
+        <i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+  <nav class="sider">
+    <ul class="inner-menu">
+      <li> <a href="/dashboard.html"><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+      <li><a href="/admin-collection-list.html"><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a>
+      </li>
+      <li><a href="/manage-product.html"><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+      <li><a href="/order-manager.html"><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+      <li><a href="/quanLyNguoiDung.html"><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+      <li><a href="reviews-comment.html"><i class="fa-solid fa-comment"></i> Xem reviews</a></li>
+    </ul>
+    <hr />
+    <ul class="inner-menu">
+      <li><a href="setting-list.html" class="active"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+      <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất </a></li>
+    </ul>
+  </nav>
+  <div class="sider-overlay"></div>
+  <main class="main">
+    <h1 class="box-title">Tài khoản quản trị</h1>
+    <div class="section-4">
+      <div class="inner-item inner-label">
+        <i class="fa-solid fa-filter"></i> Bộ lọc
+      </div>
+      <div class="inner-item">
+        <select name="">
+          <option value="">Trạng thái </option>
+          <option value="">Hoạt động</option>
+          <option value="">Tạm dừng</option>
+        </select>
+      </div>
+      <div class="inner-item">
+        <input type="date" /><span>-</span>
+        <input type="date" />
+      </div>
+      <div class="inner-item">
+        <select name="">
+          <option value="">Nhóm quyền</option>
+          <option value="">Quản trị viên</option>
+          <option value="">Quản lý sản phẩm</option>
+          <option value="">Quản lý đơn hàng</option>
+        </select>
+      </div>
+      <div class="inner-item inner-reset"><i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc</div>
+    </div>
+    <div class="section-5">
+      <div class="inner-change-status">
+        <div class="inner-item">
+          <select name="">
+            <option value="">-- Hành động -- </option>
+            <option value="">Hoạt động </option>
             <option value="">Tạm dừng</option>
+            <option value="">Xóa</option>
           </select>
         </div>
         <div class="inner-item">
-          <input type="date"/><span>-</span>
-          <input type="date"/>
-        </div>
-        <div class="inner-item"> 
-          <select name=""> 
-            <option value="">Nhóm quyền</option>
-            <option value="">Quản trị viên</option>
-            <option value="">Quản lý sản phẩm</option>
-            <option value="">Quản lý đơn hàng</option>
-          </select>
-        </div>
-        <div class="inner-item inner-reset"><i class="fa-solid fa-rotate-left"></i> Xóa bộ lọc</div>
-      </div>
-      <div class="section-5">
-        <div class="inner-change-status">
-          <div class="inner-item"> 
-            <select name="">
-              <option value="">-- Hành động -- </option>
-              <option value="">Hoạt động   </option>
-              <option value="">Tạm dừng</option>
-              <option value="">Xóa</option>
-            </select>
-          </div>
-          <div class="inner-item"> 
-            <button>Áp dụng</button>
-          </div>
-        </div>
-        <div class="inner-search">
-           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Tìm kiếm"/>
-        </div>
-        <div class="inner-button-create"> <a href="account-admin-create.html">+ Tạo mới</a></div>
-      </div>
-      <div class="section-6"> 
-        <div class="table-2"> 
-          <table> 
-            <thead> 
-              <tr> 
-                <th> 
-                  <input class="custom-check" type="checkbox" id="check1"/>
-                  <label class="custom-icon-checkbox" for="check1"><i class="fa-solid fa-check"></i></label>
-                </th>
-                <th>Họ tên</th>
-                <th class="inner-center">Ảnh đại diện</th>
-                <th>Email</th>
-                <th>Số điện thoại</th>
-                <th>Nhóm quyền</th>
-                <th>Chức vụ</th>
-                <th>Trạng thái</th>
-                <th>Hành động</th>
-              </tr>
-            </thead>
-            <tbody> 
-              <tr> 
-                <td> 
-                  <input class="custom-check" type="checkbox" id="check2"/>
-                  <label class="custom-icon-checkbox" for="check2"><i class="fa-solid fa-check"></i></label>
-                </td>
-                <td>Lê Văn A</td>
-                <td class="inner-center"><img src="assets/dashboard/images/admin.jpg"/></td>
-                <td>levana@gmail.com</td>
-                <td>01234567890</td>
-                <td>Quản trị viên</td>
-                <td>Giám đốc</td>
-                <td>
-                  <div class="badge badge-green">Hoạt động</div>
-                </td>
-                <td>
-                  <div class="inner-buttons"><a class="inner-edit" href="#"><i class="fa-solid fa-pen-to-square"></i> </a><a class="inner-remove" href="#"><i class="fa-solid fa-trash-can"></i></a></div>
-                </td>
-              </tr>
-              <tr> 
-                <td> 
-                  <input class="custom-check" type="checkbox" id="check3"/>
-                  <label class="custom-icon-checkbox" for="check3"><i class="fa-solid fa-check"></i></label>
-                </td>
-                <td>Lê Văn A</td>
-                <td class="inner-center"><img src="assets/dashboard/images/admin.jpg"/></td>
-                <td>levana@gmail.com</td>
-                <td>01234567890</td>
-                <td>Quản trị viên</td>
-                <td>Giám đốc</td>
-                <td> 
-                  <div class="badge badge-red">Tạm dừng</div>
-                </td>
-                <td>
-                  <div class="inner-buttons"><a class="inner-edit" href="#"><i class="fa-solid fa-pen-to-square"></i> </a><a class="inner-remove" href="#"><i class="fa-solid fa-trash-can"></i></a></div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <button>Áp dụng</button>
         </div>
       </div>
-      <div class="pagination"> <span class="inner-label">Hiển thị 1 - 9 của 78</span>
-        <select class="inner-pagination" name="">
-          <option value="">Trang 1  </option>
-          <option value="">Trang 2  </option>
-          <option value="">Trang 3  </option>
-          <option value="">Trang 4  </option>
-        </select>
+      <div class="inner-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Tìm kiếm" />
       </div>
-    </main>
-    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
-    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
-    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
-    <script src="assets/dashboard/js/nqh-script.js"> </script>
-  </body>
+      <div class="inner-button-create"> <a href="account-admin-create.html">+ Tạo mới</a></div>
+    </div>
+    <div class="section-6">
+      <div class="table-2">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <input class="custom-check" type="checkbox" id="check1" />
+                <label class="custom-icon-checkbox" for="check1"><i class="fa-solid fa-check"></i></label>
+              </th>
+              <th>Họ tên</th>
+              <th class="inner-center">Ảnh đại diện</th>
+              <th>Email</th>
+              <th>Số điện thoại</th>
+              <th>Nhóm quyền</th>
+              <th>Chức vụ</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input class="custom-check" type="checkbox" id="check2" />
+                <label class="custom-icon-checkbox" for="check2"><i class="fa-solid fa-check"></i></label>
+              </td>
+              <td>Lê Văn A</td>
+              <td class="inner-center"><img src="assets/dashboard/images/admin.jpg" /></td>
+              <td>levana@gmail.com</td>
+              <td>01234567890</td>
+              <td>Quản trị viên</td>
+              <td>Giám đốc</td>
+              <td>
+                <div class="badge badge-green">Hoạt động</div>
+              </td>
+              <td>
+                <div class="inner-buttons"><a class="inner-edit" href="#"><i class="fa-solid fa-pen-to-square"></i>
+                  </a><a class="inner-remove" href="#"><i class="fa-solid fa-trash-can"></i></a></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="custom-check" type="checkbox" id="check3" />
+                <label class="custom-icon-checkbox" for="check3"><i class="fa-solid fa-check"></i></label>
+              </td>
+              <td>Lê Văn A</td>
+              <td class="inner-center"><img src="assets/dashboard/images/admin.jpg" /></td>
+              <td>levana@gmail.com</td>
+              <td>01234567890</td>
+              <td>Quản trị viên</td>
+              <td>Giám đốc</td>
+              <td>
+                <div class="badge badge-red">Tạm dừng</div>
+              </td>
+              <td>
+                <div class="inner-buttons"><a class="inner-edit" href="#"><i class="fa-solid fa-pen-to-square"></i>
+                  </a><a class="inner-remove" href="#"><i class="fa-solid fa-trash-can"></i></a></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pagination"> <span class="inner-label">Hiển thị 1 - 9 của 78</span>
+      <select class="inner-pagination" name="">
+        <option value="">Trang 1 </option>
+        <option value="">Trang 2 </option>
+        <option value="">Trang 3 </option>
+        <option value="">Trang 4 </option>
+      </select>
+    </div>
+  </main>
+  <script
+    src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+  <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+  <script src="assets/dashboard/js/nqh-script.js"> </script>
+</body>
+
 </html>

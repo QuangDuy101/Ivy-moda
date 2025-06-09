@@ -1,105 +1,113 @@
-<!DOCTYPE html >
-<html> 
-  <head> 
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css"/>
-    <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-    <script src="assets/dashboard/js/tinymce-config.js"> </script>
-    <link rel="stylesheet" href="assets/dashboard/css/style.css"/>
-    <title>Tạo tài khoản quản trị</title>
-  </head>
-  <body> 
-    <header class="header"> 
-      <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
-      <div class="inner-wrap"> 
-        <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg"/><span>6</span></div>
-        <div class="inner-account"> 
-          <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg"/></div>
-          <div class="inner-text"> 
-            <div class="inner-name">Ngo Quang Ha</div>
-            <div class="inner-role">Admin</div>
-          </div>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/dashboard/images/logo-icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" />
+  <link rel="stylesheet" href="https://unpkg.com/filepond@^4/dist/filepond.css" />
+  <script src="https://cdn.tiny.cloud/1/k3k9lsufqjlaa9zf5k2byf3r904v6q7c3iltpkq7w4n7ohvr/tinymce/7/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="assets/dashboard/js/tinymce-config.js"> </script>
+  <link rel="stylesheet" href="assets/dashboard/css/style.css" />
+  <title>Tạo tài khoản quản trị</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner-logo"> <a href="/"><span>IVY</span><span>Moda </span></a></div>
+    <div class="inner-wrap">
+      <div class="inner-notify"> <img src="assets/dashboard/images/icon-bell.svg" /><span>6</span></div>
+      <div class="inner-account">
+        <div class="inner-avatar"> <img src="assets/dashboard/images/admin.jpg" /></div>
+        <div class="inner-text">
+          <div class="inner-name">Ngo Quang Ha</div>
+          <div class="inner-role">Admin</div>
         </div>
-        <button class="inner-menu-mobile">
-           <i class="fa-solid fa-bars"></i></button>
       </div>
-    </header>
-    <nav class="sider"> 
-      <ul class="inner-menu"> 
-        <li> <a class="" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
-        <li><a href=""><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a></li>
-        <li><a href=""><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
-        <li><a href=""><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
-        <li><a href=""><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
-      </ul>
-      <hr/>
-      <ul class="inner-menu"> 
-        <li><a href="setting-list.html" class="active"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
-        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất  </a></li>
-      </ul>
-    </nav>
-    <div class="sider-overlay"></div>
-    <main class="main">
-      <h1 class="box-title">Tạo tài khoản quản trị</h1>
-      <div class="section-8"> 
-        <form action="" id="account-admin-create-form">
-          <div class="inner-group"> 
-            <label class="inner-label" for="name">Họ tên</label>
-            <input type="text" id="name" name="name"/>
-          </div>
-          <div class="inner-group"> 
-            <label class="inner-label" for="email">Email</label>
-            <input type="email" id="email" name="email"/>
-          </div>
-          <div class="inner-group"> 
-            <label class="inner-label" for="phone">Số điện thoại</label>
-            <input type="text" id="phone" name="phone"/>
-          </div>
-          <div class="inner-group"> 
-            <label class="inner-label" for="role">Nhóm quyền</label>
-            <select name="role" id="role"> 
-              <option value="">Quản trị viên</option>
-              <option value="">Quản lý sản phẩm</option>
-              <option value="">Quản lý đơn hàng</option>
-            </select>
-          </div>
-          <div class="inner-group"> 
-            <label class="inner-label" for="position">Chức vụ</label>
-            <input type="text" id="position" name="position"/>
-          </div>
-          <div class="inner-group"> 
-            <label class="inner-label" for="status">Trạng thái</label>
-            <select name="status" id="status"> 
-              <option value="">Hoạt động</option>
-              <option value="">Dừng hoạt động</option>
-              <option value="">Đã hủy</option>
-            </select>
-          </div>
-          <div class="inner-group"> 
-            <label class="inner-label" for="password">Mật khẩu</label>
-            <input type="text" id="password" name="password"/>
-          </div>
-          <div class="inner-group inner-two-col">
-            <label class="inner-label" for="avatar">Ảnh đại diện</label>
-            <input type="file" id="avatar" accept="image/*" filepond-image="filepond-image"/>
-          </div>
-          <div class="inner-button-2 inner-two-col"> 
-            <button>Tạo mới</button>
-          </div>
-        </form>
-        <div class="inner-back"><a href="account-admin-list.html">Quay lại danh sách </a></div>
-      </div>
-    </main>
-    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
-    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
-    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
-    <script src="assets/dashboard/js/nqh-script.js"> </script>
-  </body>
+      <button class="inner-menu-mobile">
+        <i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+  <nav class="sider">
+    <ul class="inner-menu">
+      <li> <a href="/dashboard.html"><i class="fa-solid fa-gauge-high"></i> Tổng quan</a></li>
+      <li><a href="/admin-collection-list.html"><i class="fa-solid fa-table"></i> Quản lý bộ sưu tập</a>
+      </li>
+      <li><a href="/manage-product.html"><i class="fa-solid fa-table-list"></i> Quản lý sản phẩm</a></li>
+      <li><a href="/order-manager.html"><i class="fa-solid fa-list-check"></i> Quản lý đơn hàng</a></li>
+      <li><a href="/quanLyNguoiDung.html"><i class="fa-solid fa-user"></i> Quản lý người dùng</a></li>
+      <li><a href="reviews-comment.html"><i class="fa-solid fa-comment"></i> Xem reviews</a></li>
+    </ul>
+    <hr />
+    <ul class="inner-menu">
+      <li><a href="setting-list.html" class="active"><i class="fa-solid fa-gear"></i> Cài đặt chung</a></li>
+      <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Đăng xuất </a></li>
+    </ul>
+  </nav>
+  <div class="sider-overlay"></div>
+  <main class="main">
+    <h1 class="box-title">Tạo tài khoản quản trị</h1>
+    <div class="section-8">
+      <form action="" id="account-admin-create-form">
+        <div class="inner-group">
+          <label class="inner-label" for="name">Họ tên</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="inner-group">
+          <label class="inner-label" for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="inner-group">
+          <label class="inner-label" for="phone">Số điện thoại</label>
+          <input type="text" id="phone" name="phone" />
+        </div>
+        <div class="inner-group">
+          <label class="inner-label" for="role">Nhóm quyền</label>
+          <select name="role" id="role">
+            <option value="">Quản trị viên</option>
+            <option value="">Quản lý sản phẩm</option>
+            <option value="">Quản lý đơn hàng</option>
+          </select>
+        </div>
+        <div class="inner-group">
+          <label class="inner-label" for="position">Chức vụ</label>
+          <input type="text" id="position" name="position" />
+        </div>
+        <div class="inner-group">
+          <label class="inner-label" for="status">Trạng thái</label>
+          <select name="status" id="status">
+            <option value="">Hoạt động</option>
+            <option value="">Dừng hoạt động</option>
+            <option value="">Đã hủy</option>
+          </select>
+        </div>
+        <div class="inner-group">
+          <label class="inner-label" for="password">Mật khẩu</label>
+          <input type="text" id="password" name="password" />
+        </div>
+        <div class="inner-group inner-two-col">
+          <label class="inner-label" for="avatar">Ảnh đại diện</label>
+          <input type="file" id="avatar" accept="image/*" filepond-image="filepond-image" />
+        </div>
+        <div class="inner-button-2 inner-two-col">
+          <button>Tạo mới</button>
+        </div>
+      </form>
+      <div class="inner-back"><a href="account-admin-list.html">Quay lại danh sách </a></div>
+    </div>
+  </main>
+  <script
+    src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"> </script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"> </script>
+  <script src="https://unpkg.com/filepond@^4/dist/filepond.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"> </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"> </script>
+  <script src="assets/dashboard/js/nqh-script.js"> </script>
+</body>
+
 </html>
